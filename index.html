@@ -6,6 +6,9 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
         <script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/go.min.js"></script>
         <script src="https://referlist.co/resources/referlist.js" type="text/javascript"></script>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <style>
 
             /* flip : cc (*https://davidwalsh.name/css-flip) */            
@@ -30,6 +33,7 @@
             /* hide back of pane during swap */
             .front, .back {
               backface-visibility: hidden;
+              -webkit-backface-visibility: hidden;
               position: absolute;
               top: 0;
               left: 0;
@@ -91,17 +95,17 @@
 
             #referlistbutton {
                 height: 48px;
-                width: 130px;                
+                width: 120px;                
                 text-align: center;
-                margin: 20px 0;
+                margin: 20px 0px;               
                 cursor: pointer;
                 transition: all 0.3s ease;
-                outline: none; 
+                outline: none;                 
             } 
 
             #referlistemail {
                 height: 48px;
-                width: 240px; 
+                width: 230px; 
                 padding-left: 8px;                
                 cursor: pointer;
                 transition: all 0.3s ease;
