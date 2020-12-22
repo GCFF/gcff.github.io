@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>l0.ai</title>
+    <link>http://l0.ai/</link>
+    <description>Recent content on l0.ai</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 22 Dec 2020 14:45:06 +0000</lastBuildDate>
+    
+	<atom:link href="http://l0.ai/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The trilemma communication device</title>
+      <link>http://l0.ai/posts/2020-12-22-trilema-device/</link>
+      <pubDate>Tue, 22 Dec 2020 14:45:06 +0000</pubDate>
+      
+      <guid>http://l0.ai/posts/2020-12-22-trilema-device/</guid>
+      <description>The trilemma communication device The trilemma, a choice where you have to pick 2 out of 3 properties, appears often - and more than an intrinsic characteristic of social or productive systems, it&amp;rsquo;s a useful communication device. Specifically, it&amp;rsquo;s a more nuanced trade-off representation than the dichotomy.
+Dichotomy as a comms device is common: do you want to be &amp;lsquo;good&amp;rsquo; or &amp;lsquo;right&amp;rsquo;. Dichotomies are often either false in contradiction or false in antinomy.</description>
+    </item>
+    
+    <item>
+      <title>About me</title>
+      <link>http://l0.ai/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://l0.ai/about/</guid>
+      <description>My name is Guillermo. I work in technology.
+Usually building teams or technology that explores the space between machine intelligence and product experience. I&amp;rsquo;ve done this at a very large social media company, at a number of start-ups (including my own!) and larger co&amp;rsquo;s.
+l0.ai is where I write about technology: machine learning, data and labeling, management and communication.</description>
+    </item>
+    
+  </channel>
+</rss>
