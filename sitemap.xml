@@ -3,36 +3,51 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://l0.ai/tags/comms/</loc>
+    <loc>https://l0.ai/</loc>
+    <lastmod>2021-01-11T16:53:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://l0.ai/posts/</loc>
+    <lastmod>2021-01-11T16:53:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://l0.ai/tags/</loc>
+    <lastmod>2021-01-11T16:53:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://l0.ai/tags/tech/</loc>
+    <lastmod>2021-01-11T16:53:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://l0.ai/posts/2021-01-11-this-is-not-the-whole-video/</loc>
+    <lastmod>2021-01-11T16:53:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://l0.ai/tags/video-integrity/</loc>
+    <lastmod>2021-01-11T16:53:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://l0.ai/tags/comms/</loc>
     <lastmod>2020-12-22T14:45:06+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://l0.ai/</loc>
+    <loc>https://l0.ai/posts/2020-12-22-trilema-device/</loc>
     <lastmod>2020-12-22T14:45:06+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://l0.ai/posts/</loc>
-    <lastmod>2020-12-22T14:45:06+00:00</lastmod>
+    <loc>https://l0.ai/about/</loc>
   </url>
   
   <url>
-    <loc>http://l0.ai/tags/</loc>
-    <lastmod>2020-12-22T14:45:06+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://l0.ai/posts/2020-12-22-trilema-device/</loc>
-    <lastmod>2020-12-22T14:45:06+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://l0.ai/about/</loc>
-  </url>
-  
-  <url>
-    <loc>http://l0.ai/categories/</loc>
+    <loc>https://l0.ai/categories/</loc>
   </url>
   
 </urlset>

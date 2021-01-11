@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ARC, AI on l0.ai</title>
+    <link>https://l0.ai/tags/arc-ai/</link>
+    <description>Recent content in ARC, AI on l0.ai</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 22 Dec 2020 15:45:06 +0000</lastBuildDate>
+    
+	<atom:link href="https://l0.ai/tags/arc-ai/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The ARC Challenge</title>
+      <link>https://l0.ai/posts/2020-12-22-arc-intro/</link>
+      <pubDate>Tue, 22 Dec 2020 15:45:06 +0000</pubDate>
+      
+      <guid>https://l0.ai/posts/2020-12-22-arc-intro/</guid>
+      <description>Build a model $f_{\theta}(X, p) = Y$ that will take as input a support sample of input images $x_i \in X$ and a program $p$ and output _resulting_ images $y_i \in Y$, where $x_i$ and $y_i$ are samples of input/output pairs where the output can be _generated_ by applying $p$ to the input $x_i$ in the pair.
+For each training episode $i \in N$ , for a small $N$ is an example of the result of executing a program, such that our model learns to execute arbitrary programs.</description>
+    </item>
+    
+  </channel>
+</rss>

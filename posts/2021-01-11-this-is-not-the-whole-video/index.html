@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> This is not the full video | l0.ai</title>
+  <meta name="description" content="l0.ai is where I {guillermo christen} write about technology: machine learning, data and labeling, management and communication.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta property="og:title" content="This is not the full video" />
+<meta property="og:description" content="This is not the full video TL;DR: video recording devices or apps that follow ‘a standard’, sign each frame of a video being recorded with the last frame’s signature. Video hosting platforms or news outlets can compute if they have the last frame (and wether the video has been tampered) - and surface this information to users using merkle trees
+A half baked idea As an increasing amount of user generated video on platforms like Youtube, Twitter and Facebook cover current events - and become part of the ‘news’ - a significant (though certainly not new) problem arises for the viewer: can I trust this content?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://l0.ai/posts/2021-01-11-this-is-not-the-whole-video/" />
+<meta property="article:published_time" content="2021-01-11T16:53:00+00:00" />
+<meta property="article:modified_time" content="2021-01-11T16:53:00+00:00" />
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="This is not the full video"/>
+<meta name="twitter:description" content="This is not the full video TL;DR: video recording devices or apps that follow ‘a standard’, sign each frame of a video being recorded with the last frame’s signature. Video hosting platforms or news outlets can compute if they have the last frame (and wether the video has been tampered) - and surface this information to users using merkle trees
+A half baked idea As an increasing amount of user generated video on platforms like Youtube, Twitter and Facebook cover current events - and become part of the ‘news’ - a significant (though certainly not new) problem arises for the viewer: can I trust this content?"/>
+
+  
+  
+  
+  <link rel="stylesheet" href="https://l0.ai/css/style-white.css">
+  
+  
+  
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+<link rel="icon" type="image/png" href="https://l0.ai/images/favicon.ico" />
+
+  
+  
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+  <div class="content index py4">
+
+  <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+        <li><a href="/">Home</a></li>
+         
+        <li><a href="/posts">Writings</a></li>
+         
+        <li><a href="/about">About</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li>
+          <a class="icon" href=" https://l0.ai/posts/2020-12-22-trilema-device/">
+            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');">
+            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#">
+            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
+          </a>
+        </li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fl0.ai%2fposts%2f2021-01-11-this-is-not-the-whole-video%2f">
+      <i class="fab fa-facebook " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fl0.ai%2fposts%2f2021-01-11-this-is-not-the-whole-video%2f&text=This%20is%20not%20the%20full%20video">
+      <i class="fab fa-twitter " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fl0.ai%2fposts%2f2021-01-11-this-is-not-the-whole-video%2f&title=This%20is%20not%20the%20full%20video">
+      <i class="fab fa-linkedin " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fl0.ai%2fposts%2f2021-01-11-this-is-not-the-whole-video%2f&is_video=false&description=This%20is%20not%20the%20full%20video">
+      <i class="fab fa-pinterest " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=This%20is%20not%20the%20full%20video&body=Check out this article: https%3a%2f%2fl0.ai%2fposts%2f2021-01-11-this-is-not-the-whole-video%2f">
+      <i class="fas fa-envelope " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fl0.ai%2fposts%2f2021-01-11-this-is-not-the-whole-video%2f&title=This%20is%20not%20the%20full%20video">
+      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2021-01-11-this-is-not-the-whole-video%2f&title=This%20is%20not%20the%20full%20video">
+      <i class="fab fa-reddit " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.stumbleupon.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2021-01-11-this-is-not-the-whole-video%2f&title=This%20is%20not%20the%20full%20video">
+      <i class="fab fa-stumbleupon " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://digg.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2021-01-11-this-is-not-the-whole-video%2f&title=This%20is%20not%20the%20full%20video">
+      <i class="fab fa-digg " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fl0.ai%2fposts%2f2021-01-11-this-is-not-the-whole-video%2f&name=This%20is%20not%20the%20full%20video&description=This%20is%20not%20the%20full%20video%20TL%3bDR%3a%20video%20recording%20devices%20or%20apps%20that%20follow%20%e2%80%98a%20standard%e2%80%99%2c%20sign%20each%20frame%20of%20a%20video%20being%20recorded%20with%20the%20last%20frame%e2%80%99s%20signature.%20Video%20hosting%20platforms%20or%20news%20outlets%20can%20compute%20if%20they%20have%20the%20last%20frame%20%28and%20wether%20the%20video%20has%20been%20tampered%29%20-%20and%20surface%20this%20information%20to%20users%20using%20merkle%20trees%0aA%20half%20baked%20idea%20As%20an%20increasing%20amount%20of%20user%20generated%20video%20on%20platforms%20like%20Youtube%2c%20Twitter%20and%20Facebook%20cover%20current%20events%20-%20and%20become%20part%20of%20the%20%e2%80%98news%e2%80%99%20-%20a%20significant%20%28though%20certainly%20not%20new%29%20problem%20arises%20for%20the%20viewer%3a%20can%20I%20trust%20this%20content%3f">
+      <i class="fab fa-tumblr " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fl0.ai%2fposts%2f2021-01-11-this-is-not-the-whole-video%2f&t=This%20is%20not%20the%20full%20video">
+      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#this-is-not-the-full-video">This is not the full video</a>
+      <ul>
+        <li><a href="#a-half-baked-idea">A half baked idea</a></li>
+        <li><a href="#solution">Solution:</a></li>
+        <li><a href="#critical-issues--attacks">Critical issues / attacks:</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+  </span>
+</div>
+
+
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+      <h1 class="posttitle" itemprop="name headline">
+        This is not the full video
+      </h1>
+      <div class="meta">
+        
+        <div class="postdate">
+          
+          <time datetime="2021-01-11 16:53:00 &#43;0000 UTC" itemprop="datePublished">2021-01-11</time>
+          
+        </div>
+        
+        
+        <div class="article-tag">
+            <i class="fas fa-tag"></i>
+            
+            
+            <a class="tag-link" href="/tags/tech" rel="tag">tech</a>
+            
+             ,  
+            <a class="tag-link" href="/tags/video-integrity" rel="tag">video integrity</a>
+            
+        </div>
+        
+      </div>
+    </header>
+
+  
+    <div class="content" itemprop="articleBody">
+      <h2 id="this-is-not-the-full-video">This is not the full video</h2>
+<p><strong>TL;DR:</strong> video recording devices or apps that follow <em>‘a standard’</em>, sign each frame of a video being recorded with the last frame’s signature. Video hosting platforms or news outlets can compute if they have the last frame (and wether the video has been tampered) - and surface this information to users using merkle trees</p>
+<h3 id="a-half-baked-idea">A half baked idea</h3>
+<p>As an increasing amount of user generated video on platforms like Youtube, Twitter and Facebook cover current events - and become part of the ‘news’ - a significant (though certainly not new) problem arises for the viewer: <em><strong>can I trust this content?</strong></em></p>
+<p>Trust is built by consistency and transparency over time. A simpler question to ask of a piece of content is: Is this video edited in a tendencious way? Simpler still: is this the whole video?</p>
+<p>Recently, before going to sleep, I was thinking about how a tiny minority of content on platforms can be leveraged to influence large groups. This is not new: <strong><em><a href="https://www.amazon.co.uk/Manufacturing-Consent-Political-Economy-Media/dp/0099533111">content crafted for influence</a>.</em></strong> The speed of delivery is new though - predicated on platforms that depend on user generated content.** Edited videos are, I think, the most convincing: they show partial truths**. I was wondering if there was a simple way to validate to me as the user, that I’m looking at **_the full video. _**</p>
+<p>So, this is a half baked idea to attempt to solve the problem (with some glaring problems) - and hopefully learn a little. Note: this is a means to learn - I’m not a video encoding, security or cryptography expert.</p>
+<h3 id="solution">Solution:</h3>
+<p><strong>Smartphone apps or cameras</strong> implement a standard that appends to each each frame the final frame’s signature. From this last signature, it should be possible to:</p>
+<ol>
+<li>See if the current frame is the last frame - <em>you have seen the full video</em></li>
+<li>Validate that the frames, in order, lead to the last frame - <em>there are no frames removed or added</em></li>
+</ol>
+<p>A way to accomplish this could be to use <a href="https://en.wikipedia.org/wiki/Merkle_tree">Merkle trees</a>, or a chain of signatures. Specifically video recording devices or apps that follow the standard would:</p>
+<ul>
+<li>In sequential order, sign every frame, where the signature is the current frame’s hash and the previous frame’s signature. A similar approach is proposed in <a href="https://core.ac.uk/download/pdf/82623601.pdf">this</a> paper to sign video streams.</li>
+<li>Once the recording stops (when the stop button is pressed), the video is <em>‘re-coded’</em> to include the last frame’s signature in all frames.
+<ul>
+<li>In practice (and when <strong>not</strong> streaming) both steps can happen once recording stops</li>
+</ul>
+</li>
+</ul>
+<p><strong>Platforms that receive videos</strong> that follow this standard can:</p>
+<ul>
+<li>Prove you have seen the last frame of the video or not - and display this information to end users</li>
+<li>Prove the video has not been edited to have omissions, additions or replacements</li>
+<li>This poses interesting questions:
+<ul>
+<li>How should this information be shown?</li>
+<li>Does this change user interaction when the video is being uploaded? (a leak to an attacker)</li>
+<li>Should this information influence how videos are ranked?</li>
+</ul>
+</li>
+</ul>
+<h3 id="critical-issues--attacks">Critical issues / attacks:</h3>
+<ul>
+<li>
+<p><em>Given a video that implements the standard (has the final frame signature embedded), remove the signature, edit and upload.</em></p>
+<p>This is essentially an ecosystem attack - you can still go to websites without using SSL - but as a whole the ecosystem (and its tools) has shifted to make it clear, it’s probably not safe.</p>
+<p>This is a significant challenge, mitigated primarily by adoption incentives.</p>
+</li>
+<li>
+<p><em>Given a video that implements the standard, remove the signature, edit video and resign the video to append a new final frame signature that matches the edit.</em></p>
+<p>This is a problem similar to the Certificate Authority problem, though with some additional complications.</p>
+<p><em>In the naive case</em> - we assume an attacker cannot steal the signing certificate embedded in apps and devices. In this case we can validate the video has been signed with a valid certificate.</p>
+<p><strong>The <em>non-naive</em> case seems super complicated:</strong> if an attacker can steal a valid signing certificate, then it seems to me the degree of validation possible is proportional to the constraints added. This is seriously bugging me, so I think it’ll imply another full post in the future, and some more research into cryptography and perhaps the old days of DRM for inspiration.</p>
+</li>
+</ul>
+<p>In a future post I’ll show a simple code example and attempt to tackle / reason through questions about applicability.</p>
+<p>_	_</p>
+<p><strong>Refs:</strong></p>
+<ul>
+<li><a href="https://technology.blog.gov.uk/2015/10/13/guaranteeing-the-integrity-of-a-register/">Guaranteeing the integrity of a register</a></li>
+<li><a href="https://core.ac.uk/download/pdf/82623601.pdf">How to Sign Digital Streams, Information and Computation 165, 100–116 (2001)</a></li>
+</ul>
+
+    </div>
+  </article>
+
+  
+  
+
+
+
+
+
+  <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/posts">Writings</a></li>
+         
+          <li><a href="/about">About</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#this-is-not-the-full-video">This is not the full video</a>
+      <ul>
+        <li><a href="#a-half-baked-idea">A half baked idea</a></li>
+        <li><a href="#solution">Solution:</a></li>
+        <li><a href="#critical-issues--attacks">Critical issues / attacks:</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fl0.ai%2fposts%2f2021-01-11-this-is-not-the-whole-video%2f">
+      <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fl0.ai%2fposts%2f2021-01-11-this-is-not-the-whole-video%2f&text=This%20is%20not%20the%20full%20video">
+      <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fl0.ai%2fposts%2f2021-01-11-this-is-not-the-whole-video%2f&title=This%20is%20not%20the%20full%20video">
+      <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fl0.ai%2fposts%2f2021-01-11-this-is-not-the-whole-video%2f&is_video=false&description=This%20is%20not%20the%20full%20video">
+      <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=This%20is%20not%20the%20full%20video&body=Check out this article: https%3a%2f%2fl0.ai%2fposts%2f2021-01-11-this-is-not-the-whole-video%2f">
+      <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fl0.ai%2fposts%2f2021-01-11-this-is-not-the-whole-video%2f&title=This%20is%20not%20the%20full%20video">
+      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2021-01-11-this-is-not-the-whole-video%2f&title=This%20is%20not%20the%20full%20video">
+      <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.stumbleupon.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2021-01-11-this-is-not-the-whole-video%2f&title=This%20is%20not%20the%20full%20video">
+      <i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://digg.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2021-01-11-this-is-not-the-whole-video%2f&title=This%20is%20not%20the%20full%20video">
+      <i class="fab fa-digg fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fl0.ai%2fposts%2f2021-01-11-this-is-not-the-whole-video%2f&name=This%20is%20not%20the%20full%20video&description=This%20is%20not%20the%20full%20video%20TL%3bDR%3a%20video%20recording%20devices%20or%20apps%20that%20follow%20%e2%80%98a%20standard%e2%80%99%2c%20sign%20each%20frame%20of%20a%20video%20being%20recorded%20with%20the%20last%20frame%e2%80%99s%20signature.%20Video%20hosting%20platforms%20or%20news%20outlets%20can%20compute%20if%20they%20have%20the%20last%20frame%20%28and%20wether%20the%20video%20has%20been%20tampered%29%20-%20and%20surface%20this%20information%20to%20users%20using%20merkle%20trees%0aA%20half%20baked%20idea%20As%20an%20increasing%20amount%20of%20user%20generated%20video%20on%20platforms%20like%20Youtube%2c%20Twitter%20and%20Facebook%20cover%20current%20events%20-%20and%20become%20part%20of%20the%20%e2%80%98news%e2%80%99%20-%20a%20significant%20%28though%20certainly%20not%20new%29%20problem%20arises%20for%20the%20viewer%3a%20can%20I%20trust%20this%20content%3f">
+      <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fl0.ai%2fposts%2f2021-01-11-this-is-not-the-whole-video%2f&t=This%20is%20not%20the%20full%20video">
+      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;">
+          <i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;">
+          <i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;">
+          <i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');">
+          <i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+
+  <footer id="footer">
+  <div class="footer-left">
+    Copyright  &copy; 2021  l0.ai 
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+        <li><a href="/">Home</a></li>
+         
+        <li><a href="/posts">Writings</a></li>
+         
+        <li><a href="/about">About</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+
+  </div>
+</body>
+
+<link rel="stylesheet" href=/lib/font-awesome/css/all.min.css>
+<script src=/lib/jquery/jquery.min.js></script>
+<script src=/js/main.js></script>
+
+
+
+</html>
