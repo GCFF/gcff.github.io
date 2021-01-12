@@ -22,6 +22,17 @@ A half baked idea As an increasing amount of user generated video on platforms l
     </item>
     
     <item>
+      <title>Why ARC?</title>
+      <link>https://l0.ai/posts/2020-12-22-arc-intro/</link>
+      <pubDate>Mon, 28 Dec 2020 15:45:06 +0000</pubDate>
+      
+      <guid>https://l0.ai/posts/2020-12-22-arc-intro/</guid>
+      <description>Intro In November 2019, François Chollet released a paper called &amp;ldquo;On the measure of Intelligence&amp;rdquo;. I highly recommend you read this paper if you have interest in AGI. You can roughly split the work into two, lopsided pieces: the paper and the abstraction and reasoning corpus (ARC) dataset.
+The ARC benchmark proposal in the paper poses a number of phsychometric tasks. From the paper itself:
+ ARC can be seen as a general artificial intelligence benchmark, as a program synthesis benchmark, or as a psychometric intelligence test</description>
+    </item>
+    
+    <item>
       <title>The trilemma communication device</title>
       <link>https://l0.ai/posts/2020-12-22-trilema-device/</link>
       <pubDate>Tue, 22 Dec 2020 14:45:06 +0000</pubDate>

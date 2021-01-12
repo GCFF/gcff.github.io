@@ -3,23 +3,25 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title> The ARC Challenge | l0.ai</title>
+  <title> Why ARC? | l0.ai</title>
   <meta name="description" content="l0.ai is where I {guillermo christen} write about technology: machine learning, data and labeling, management and communication.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
-  <meta property="og:title" content="The ARC Challenge" />
-<meta property="og:description" content="Build a model $f_{\theta}(X, p) = Y$ that will take as input a support sample of input images $x_i \in X$ and a program $p$ and output _resulting_ images $y_i \in Y$, where $x_i$ and $y_i$ are samples of input/output pairs where the output can be _generated_ by applying $p$ to the input $x_i$ in the pair.
-For each training episode $i \in N$ , for a small $N$ is an example of the result of executing a program, such that our model learns to execute arbitrary programs." />
+  <meta property="og:title" content="Why ARC?" />
+<meta property="og:description" content="Intro In November 2019, François Chollet released a paper called &ldquo;On the measure of Intelligence&rdquo;. I highly recommend you read this paper if you have interest in AGI. You can roughly split the work into two, lopsided pieces: the paper and the abstraction and reasoning corpus (ARC) dataset.
+The ARC benchmark proposal in the paper poses a number of phsychometric tasks. From the paper itself:
+ ARC can be seen as a general artificial intelligence benchmark, as a program synthesis benchmark, or as a psychometric intelligence test" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://l0.ai/posts/2020-12-22-arc-intro/" />
-<meta property="article:published_time" content="2020-12-22T15:45:06+00:00" />
-<meta property="article:modified_time" content="2020-12-22T15:45:06+00:00" />
+<meta property="article:published_time" content="2020-12-28T15:45:06+00:00" />
+<meta property="article:modified_time" content="2020-12-28T15:45:06+00:00" />
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="The ARC Challenge"/>
-<meta name="twitter:description" content="Build a model $f_{\theta}(X, p) = Y$ that will take as input a support sample of input images $x_i \in X$ and a program $p$ and output _resulting_ images $y_i \in Y$, where $x_i$ and $y_i$ are samples of input/output pairs where the output can be _generated_ by applying $p$ to the input $x_i$ in the pair.
-For each training episode $i \in N$ , for a small $N$ is an example of the result of executing a program, such that our model learns to execute arbitrary programs."/>
+<meta name="twitter:title" content="Why ARC?"/>
+<meta name="twitter:description" content="Intro In November 2019, François Chollet released a paper called &ldquo;On the measure of Intelligence&rdquo;. I highly recommend you read this paper if you have interest in AGI. You can roughly split the work into two, lopsided pieces: the paper and the abstraction and reasoning corpus (ARC) dataset.
+The ARC benchmark proposal in the paper poses a number of phsychometric tasks. From the paper itself:
+ ARC can be seen as a general artificial intelligence benchmark, as a program synthesis benchmark, or as a psychometric intelligence test"/>
 
   
   
@@ -38,7 +40,15 @@ For each training episode $i \in N$ , for a small $N$ is an example of the resul
 <link rel="icon" type="image/png" href="https://l0.ai/images/favicon.ico" />
 
   
+    
   
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J7MP7KW334"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-J7MP7KW334');
+  </script>  
 </head>
 
 <body class="max-width mx-auto px3 ltr">
@@ -108,52 +118,52 @@ For each training episode $i \in N$ , for a small $N$ is an example of the resul
     </a>
   </li>
   <li>
-    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fl0.ai%2fposts%2f2020-12-22-arc-intro%2f&text=The%20ARC%20Challenge">
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fl0.ai%2fposts%2f2020-12-22-arc-intro%2f&text=Why%20ARC%3f">
       <i class="fab fa-twitter " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fl0.ai%2fposts%2f2020-12-22-arc-intro%2f&title=The%20ARC%20Challenge">
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fl0.ai%2fposts%2f2020-12-22-arc-intro%2f&title=Why%20ARC%3f">
       <i class="fab fa-linkedin " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fl0.ai%2fposts%2f2020-12-22-arc-intro%2f&is_video=false&description=The%20ARC%20Challenge">
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fl0.ai%2fposts%2f2020-12-22-arc-intro%2f&is_video=false&description=Why%20ARC%3f">
       <i class="fab fa-pinterest " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="mailto:?subject=The%20ARC%20Challenge&body=Check out this article: https%3a%2f%2fl0.ai%2fposts%2f2020-12-22-arc-intro%2f">
+    <a class="icon" href="mailto:?subject=Why%20ARC%3f&body=Check out this article: https%3a%2f%2fl0.ai%2fposts%2f2020-12-22-arc-intro%2f">
       <i class="fas fa-envelope " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fl0.ai%2fposts%2f2020-12-22-arc-intro%2f&title=The%20ARC%20Challenge">
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fl0.ai%2fposts%2f2020-12-22-arc-intro%2f&title=Why%20ARC%3f">
       <i class="fab fa-get-pocket " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2020-12-22-arc-intro%2f&title=The%20ARC%20Challenge">
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2020-12-22-arc-intro%2f&title=Why%20ARC%3f">
       <i class="fab fa-reddit " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.stumbleupon.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2020-12-22-arc-intro%2f&title=The%20ARC%20Challenge">
+    <a class="icon" href="http://www.stumbleupon.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2020-12-22-arc-intro%2f&title=Why%20ARC%3f">
       <i class="fab fa-stumbleupon " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://digg.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2020-12-22-arc-intro%2f&title=The%20ARC%20Challenge">
+    <a class="icon" href="http://digg.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2020-12-22-arc-intro%2f&title=Why%20ARC%3f">
       <i class="fab fa-digg " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fl0.ai%2fposts%2f2020-12-22-arc-intro%2f&name=The%20ARC%20Challenge&description=Build%20a%20model%20%24f_%7b%5ctheta%7d%28X%2c%20p%29%20%3d%20Y%24%20that%20will%20take%20as%20input%20a%20support%20sample%20of%20input%20images%20%24x_i%20%5cin%20X%24%20and%20a%20program%20%24p%24%20and%20output%20_resulting_%20images%20%24y_i%20%5cin%20Y%24%2c%20where%20%24x_i%24%20and%20%24y_i%24%20are%20samples%20of%20input%2foutput%20pairs%20where%20the%20output%20can%20be%20_generated_%20by%20applying%20%24p%24%20to%20the%20input%20%24x_i%24%20in%20the%20pair.%0aFor%20each%20training%20episode%20%24i%20%5cin%20N%24%20%2c%20for%20a%20small%20%24N%24%20is%20an%20example%20of%20the%20result%20of%20executing%20a%20program%2c%20such%20that%20our%20model%20learns%20to%20execute%20arbitrary%20programs.">
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fl0.ai%2fposts%2f2020-12-22-arc-intro%2f&name=Why%20ARC%3f&description=Intro%20In%20November%202019%2c%20Fran%c3%a7ois%20Chollet%20released%20a%20paper%20called%20%26ldquo%3bOn%20the%20measure%20of%20Intelligence%26rdquo%3b.%20I%20highly%20recommend%20you%20read%20this%20paper%20if%20you%20have%20interest%20in%20AGI.%20You%20can%20roughly%20split%20the%20work%20into%20two%2c%20lopsided%20pieces%3a%20the%20paper%20and%20the%20abstraction%20and%20reasoning%20corpus%20%28ARC%29%20dataset.%0aThe%20ARC%20benchmark%20proposal%20in%20the%20paper%20poses%20a%20number%20of%20phsychometric%20tasks.%20From%20the%20paper%20itself%3a%0a%20ARC%20can%20be%20seen%20as%20a%20general%20artificial%20intelligence%20benchmark%2c%20as%20a%20program%20synthesis%20benchmark%2c%20or%20as%20a%20psychometric%20intelligence%20test">
       <i class="fab fa-tumblr " aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fl0.ai%2fposts%2f2020-12-22-arc-intro%2f&t=The%20ARC%20Challenge">
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fl0.ai%2fposts%2f2020-12-22-arc-intro%2f&t=Why%20ARC%3f">
       <i class="fab fa-hacker-news " aria-hidden="true"></i>
     </a>
   </li>
@@ -165,11 +175,8 @@ For each training episode $i \in N$ , for a small $N$ is an example of the resul
   <ul>
     <li>
       <ul>
-        <li><a href="#model-details">Model details</a>
-          <ul>
-            <li></li>
-          </ul>
-        </li>
+        <li><a href="#intro">Intro</a></li>
+        <li><a href="#why-arc">Why ARC?</a></li>
       </ul>
     </li>
   </ul>
@@ -182,13 +189,13 @@ For each training episode $i \in N$ , for a small $N$ is an example of the resul
   <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
     <header>
       <h1 class="posttitle" itemprop="name headline">
-        The ARC Challenge
+        Why ARC?
       </h1>
       <div class="meta">
         
         <div class="postdate">
           
-          <time datetime="2020-12-22 15:45:06 &#43;0000 UTC" itemprop="datePublished">2020-12-22</time>
+          <time datetime="2020-12-28 15:45:06 &#43;0000 UTC" itemprop="datePublished">2020-12-28</time>
           
         </div>
         
@@ -197,7 +204,13 @@ For each training episode $i \in N$ , for a small $N$ is an example of the resul
             <i class="fas fa-tag"></i>
             
             
-            <a class="tag-link" href="/tags/arc-ai" rel="tag">ARC, AI</a>
+            <a class="tag-link" href="/tags/arc" rel="tag">ARC</a>
+            
+             ,  
+            <a class="tag-link" href="/tags/ai" rel="tag">AI</a>
+            
+             ,  
+            <a class="tag-link" href="/tags/tech" rel="tag">tech</a>
             
         </div>
         
@@ -206,92 +219,27 @@ For each training episode $i \in N$ , for a small $N$ is an example of the resul
 
   
     <div class="content" itemprop="articleBody">
-      <p>Build a model $f_{\theta}(X, p) = Y$ that will take as input a support sample of input images $x_i \in X$  and a program  $p$  and output _resulting_ images $y_i \in Y$, where $x_i$ and $y_i$ are samples of input/output pairs where the output can be _generated_ by applying $p$ to the input $x_i$ in the pair.</p>
-<p>For each training episode $i \in N$ , for a <em>small</em> $N$ is an example of the result of executing a program, such that our model learns to execute arbitrary programs.</p>
-<p>This model should be able to:</p>
+      <h3 id="intro">Intro</h3>
+<p>In November 2019, <a href="https://scholar.google.com/citations?user=VfYhf2wAAAAJ&amp;hl=en&amp;oi=ao">François Chollet</a> released a paper called <a href="https://arxiv.org/abs/1911.01547">&ldquo;On the measure of Intelligence&rdquo;</a>. I highly recommend you read this paper if you have interest in AGI. You can roughly <strong>split the work into two</strong>, lopsided pieces: the paper and the abstraction and reasoning corpus (<a href="https://github.com/fchollet/ARC">ARC</a>) dataset.</p>
+<p>The ARC benchmark proposal in the paper poses a number of phsychometric tasks. From the paper itself:</p>
+<blockquote>
+<p>ARC can be seen as a general artificial intelligence benchmark, as a program synthesis benchmark, or as a psychometric intelligence test</p>
+</blockquote>
+<p>Tasks in the dataset look like this:
+<img src="../image-20200622092528619.png" alt="image"></p>
+<p>I think the ARC dataset laid out in Chollet&rsquo;s paper <strong>is one of the best characterisations</strong> of the requirements <strong>of robust machine intelligence</strong> which currently exist.</p>
+<h3 id="why-arc">Why ARC?</h3>
+<p>Two fundamental considerations in task design are:</p>
 <ul>
-<li>utilize hierarchical programs (compositionality)</li>
-<li>execute query, select, and transform operations</li>
-<li>define operatons as neural operators (learned)</li>
-<li>accept new <em>concept words</em> ala NSCL</li>
+<li><strong>well constrained assumptions about priors</strong> required for solving them. They assume a closed set of <em>previous knowledge</em> like what an object is (<em>objectness</em>) or that a dot may represent an agent trying get to a specific spot (<em>goal directedness</em>)</li>
+<li><strong>limited experience</strong>, in the form of a small number of samples per task (1-10), and a small number of samples altogether (400)</li>
 </ul>
-<h3 id="model-details">Model details</h3>
-<h5 id="image-input">Image input</h5>
-<p>For the input support sample $X$ use a convolution chain that is multi-headed (to accept variable input with minimal transformation to it). The convolution chain is defined by 1 or more <em>conv blocks</em> (TODO: define).  A training episode in this context act&rsquo;s as a batch. The result of this chain will be an embedding per $x_i$.</p>
-<h5 id="grammar">Grammar</h5>
-<p>In order to allow possible programs to be extensible (to recognise new colors or operations) the grammar structure should help in explicitly identifying <em>verb</em>, <em>attribute/relation</em>, <em>concept</em> words, such that these can be extracted via rules, as opposed to full natural language.</p>
-<p>Examples from the ARC challenge:</p>
-<table>
-<thead>
-<tr>
-<th>$p_i$</th>
-<th>$X_i, Y_i$</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>do ( crop, select( &lt;max_area&gt;, Canvas), do( recolor, select( &lt;max_area&gt;, Canvas ), query( &lt;color&gt;, Select( &lt;min_area&gt;, Canvas ) ),  Canvas  ) )</code></td>
-<td><img src="../image-20200622092528619.png" alt="ARC Task"></td>
-</tr>
-<tr>
-<td><code>do (recolor, relate ( select ( &lt;top_left&gt;, Canvas ), &lt;shape&gt;, Canvas ), &lt;grey&gt;, Canvas )</code></td>
-<td><img src="../image-20200622101334248.png" alt="ARC Task"></td>
-</tr>
-</tbody>
-</table>
-<p>Expanding $p_i$ :</p>
-<pre><code>do ( 
-  crop,
-  select(&lt;max_area&gt;, Canvas),
-  do( 
-  	recolor,
-    select(&lt;max_area&gt;, Canvas),
-    query( &lt;color&gt;, Select( &lt;min_area&gt;, Canvas ) ),    
-    Canvas
-  )
-)
-
-do (
-  recolor, 
-  relate ( 
-    select ( &lt;top_left&gt;, Canvas ), 
-    &lt;shape&gt;, 
-    Canvas ), 
-  &lt;grey&gt;, 
-  Canvas 
-)
-</code></pre><p>Some things to note in the program structure:</p>
+<p>These two considerations pose an interesting interplay.</p>
 <ul>
-<li><code>do</code>  <em>(<!-- raw HTML omitted -->, Object, *param, Canvas)  →  Canvas</em>, is for transformation operations with the first param indicating the transform</li>
-<li><code>select</code> <em>(<!-- raw HTML omitted -->, Canvas) → ObjectSet</em>, selects one or more objects with the given attribute. To simplify learning, compound attributes are resolved into a single token, as in <code>max_area</code></li>
-<li><code>query</code> <em>(<!-- raw HTML omitted -->, Object, Canvas) → <!-- raw HTML omitted --></em>, selects an attribute from the specified object found in the canvas</li>
-<li><code>relate</code> <em>(Object, <!-- raw HTML omitted -->, Canvas) → ObjectSet</em>, selects one or more objects that match the attribute of the given object</li>
+<li><em><strong>The limited experience</strong></em> (in the form of a small dataset) seems to limit large end to end models that would require a large number of parameters. <strong>There isn&rsquo;t enough experience to learn or evolve the right model!</strong></li>
+<li><em><strong>The constrained assumptions about priors</strong></em> though, provide a hint. These priors, like the perception of topology or geometry, are good candidates for big models to encode from larger datasets that describe ARC world.  They are also limited. That is, there is a limited number of models/datasets required to encode these priors.</li>
 </ul>
-<p>In the signature above, words denoted by <!-- raw HTML omitted --> are &lsquo;unknown&rsquo; terminals. They can be &ldquo;any&rdquo; word. Practically, the initial chosen embedding size (which is normally derived from the size of a known vocabulary) puts an actual limit.</p>
-<p><strong>Since <em>operations, attributes</em> and <em>objconcepts</em> are learned, this is where extensibility of the model comes from. Allowing new operations or concepts to be added without full retraining.</strong></p>
-<h5 id="program-parsing">Program parsing</h5>
-<p>Given the grammar above, program parsing will need to:</p>
-<ul>
-<li>parse concept words (ops, attributes, objconcepts) and embed them (learn embeddings)</li>
-<li>recursively parse the program</li>
-<li>branch (into &gt;1) where needed; when a canvas, select or query requires it</li>
-<li>be able to perform a map operation!</li>
-<li>maintain differentiability w.r.t the visual input</li>
-</ul>
-<p>As opposed to NSCL, the explicit program is available, so there is no need to encode the program itself and then attempt to decode it. Most of the work the model needs to do is to &lsquo;select&rsquo; and learn the appropriate neural operator, and keep the correct state in the current transformation chain.</p>
-<h5 id="sample-generation">Sample Generation</h5>
-<p>Sample generation implies both generating input images $x_i \in X$ <em>and</em> a <strong>viable</strong> programmes $p_i \in G$ that can be applied to $x_i$ to generate output images. $G$ represents the grammar from which programmes can be sampled. Sampling a programme from $G$ means selecting a valid set of instructions at random.</p>
-<p>Two important problems need to be solved:</p>
-<ul>
-<li>A valid programme doesn&rsquo;t neccesitate a <strong>viable</strong> programme: one that <strong>reuslts in a change</strong> in the input image and that doesn&rsquo;t produce a null output image. [Add example here]</li>
-<li>A <em>meaningful</em> input image: an input image with enough complexity such that <strong>viable</strong> programmes are possible and complex programmes are possible.</li>
-</ul>
-<p>The space of input images $X$ is determined by #shapes, #colors, placement of shapes, #colors/shape, the size of the grid.  The space of sample programmes in $G$ is determined by the depth of the programme. A deep programme nessesarily means more compositionatily.</p>
-<p>Sample generation will thus need:</p>
-<ul>
-<li>rejecting programmes that do not create a change <em>or</em> result in a null image</li>
-<li>being able to generate programmes of variyng complexity to enable a curriculum learning approach</li>
-</ul>
+<p><strong>So why ARC ?</strong> I think ARC forces researchers to consider how two modes of building machine learning (symbolic and approximative) should co-exist in order to build general AI. In doing so, it&rsquo;ll encourage practitioners to consider hybrid systems for far less ambitions tasks, that could potentially be much more robust, efficient and perhaps understadable.</p>
 
     </div>
   </article>
@@ -323,11 +271,8 @@ do (
   <ul>
     <li>
       <ul>
-        <li><a href="#model-details">Model details</a>
-          <ul>
-            <li></li>
-          </ul>
-        </li>
+        <li><a href="#intro">Intro</a></li>
+        <li><a href="#why-arc">Why ARC?</a></li>
       </ul>
     </li>
   </ul>
@@ -348,52 +293,52 @@ do (
     </a>
   </li>
   <li>
-    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fl0.ai%2fposts%2f2020-12-22-arc-intro%2f&text=The%20ARC%20Challenge">
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fl0.ai%2fposts%2f2020-12-22-arc-intro%2f&text=Why%20ARC%3f">
       <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fl0.ai%2fposts%2f2020-12-22-arc-intro%2f&title=The%20ARC%20Challenge">
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fl0.ai%2fposts%2f2020-12-22-arc-intro%2f&title=Why%20ARC%3f">
       <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fl0.ai%2fposts%2f2020-12-22-arc-intro%2f&is_video=false&description=The%20ARC%20Challenge">
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fl0.ai%2fposts%2f2020-12-22-arc-intro%2f&is_video=false&description=Why%20ARC%3f">
       <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="mailto:?subject=The%20ARC%20Challenge&body=Check out this article: https%3a%2f%2fl0.ai%2fposts%2f2020-12-22-arc-intro%2f">
+    <a class="icon" href="mailto:?subject=Why%20ARC%3f&body=Check out this article: https%3a%2f%2fl0.ai%2fposts%2f2020-12-22-arc-intro%2f">
       <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fl0.ai%2fposts%2f2020-12-22-arc-intro%2f&title=The%20ARC%20Challenge">
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fl0.ai%2fposts%2f2020-12-22-arc-intro%2f&title=Why%20ARC%3f">
       <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2020-12-22-arc-intro%2f&title=The%20ARC%20Challenge">
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2020-12-22-arc-intro%2f&title=Why%20ARC%3f">
       <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.stumbleupon.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2020-12-22-arc-intro%2f&title=The%20ARC%20Challenge">
+    <a class="icon" href="http://www.stumbleupon.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2020-12-22-arc-intro%2f&title=Why%20ARC%3f">
       <i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://digg.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2020-12-22-arc-intro%2f&title=The%20ARC%20Challenge">
+    <a class="icon" href="http://digg.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2020-12-22-arc-intro%2f&title=Why%20ARC%3f">
       <i class="fab fa-digg fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fl0.ai%2fposts%2f2020-12-22-arc-intro%2f&name=The%20ARC%20Challenge&description=Build%20a%20model%20%24f_%7b%5ctheta%7d%28X%2c%20p%29%20%3d%20Y%24%20that%20will%20take%20as%20input%20a%20support%20sample%20of%20input%20images%20%24x_i%20%5cin%20X%24%20and%20a%20program%20%24p%24%20and%20output%20_resulting_%20images%20%24y_i%20%5cin%20Y%24%2c%20where%20%24x_i%24%20and%20%24y_i%24%20are%20samples%20of%20input%2foutput%20pairs%20where%20the%20output%20can%20be%20_generated_%20by%20applying%20%24p%24%20to%20the%20input%20%24x_i%24%20in%20the%20pair.%0aFor%20each%20training%20episode%20%24i%20%5cin%20N%24%20%2c%20for%20a%20small%20%24N%24%20is%20an%20example%20of%20the%20result%20of%20executing%20a%20program%2c%20such%20that%20our%20model%20learns%20to%20execute%20arbitrary%20programs.">
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fl0.ai%2fposts%2f2020-12-22-arc-intro%2f&name=Why%20ARC%3f&description=Intro%20In%20November%202019%2c%20Fran%c3%a7ois%20Chollet%20released%20a%20paper%20called%20%26ldquo%3bOn%20the%20measure%20of%20Intelligence%26rdquo%3b.%20I%20highly%20recommend%20you%20read%20this%20paper%20if%20you%20have%20interest%20in%20AGI.%20You%20can%20roughly%20split%20the%20work%20into%20two%2c%20lopsided%20pieces%3a%20the%20paper%20and%20the%20abstraction%20and%20reasoning%20corpus%20%28ARC%29%20dataset.%0aThe%20ARC%20benchmark%20proposal%20in%20the%20paper%20poses%20a%20number%20of%20phsychometric%20tasks.%20From%20the%20paper%20itself%3a%0a%20ARC%20can%20be%20seen%20as%20a%20general%20artificial%20intelligence%20benchmark%2c%20as%20a%20program%20synthesis%20benchmark%2c%20or%20as%20a%20psychometric%20intelligence%20test">
       <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
     </a>
   </li>
   <li>
-    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fl0.ai%2fposts%2f2020-12-22-arc-intro%2f&t=The%20ARC%20Challenge">
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fl0.ai%2fposts%2f2020-12-22-arc-intro%2f&t=Why%20ARC%3f">
       <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
     </a>
   </li>

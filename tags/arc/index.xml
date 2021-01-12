@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ARC on l0.ai</title>
+    <link>https://l0.ai/tags/arc/</link>
+    <description>Recent content in ARC on l0.ai</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 28 Dec 2020 15:45:06 +0000</lastBuildDate>
+    
+	<atom:link href="https://l0.ai/tags/arc/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Why ARC?</title>
+      <link>https://l0.ai/posts/2020-12-22-arc-intro/</link>
+      <pubDate>Mon, 28 Dec 2020 15:45:06 +0000</pubDate>
+      
+      <guid>https://l0.ai/posts/2020-12-22-arc-intro/</guid>
+      <description>Intro In November 2019, François Chollet released a paper called &amp;ldquo;On the measure of Intelligence&amp;rdquo;. I highly recommend you read this paper if you have interest in AGI. You can roughly split the work into two, lopsided pieces: the paper and the abstraction and reasoning corpus (ARC) dataset.
+The ARC benchmark proposal in the paper poses a number of phsychometric tasks. From the paper itself:
+ ARC can be seen as a general artificial intelligence benchmark, as a program synthesis benchmark, or as a psychometric intelligence test</description>
+    </item>
+    
+  </channel>
+</rss>
