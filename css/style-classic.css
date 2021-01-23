@@ -1526,6 +1526,7 @@ code {
   font-family: "JetBrains Mono", monospace;
   -webkit-border-radius: 4px;
 }
+
 .highlight figcaption {
   margin: -5px 0 5px;
   color: #757575;

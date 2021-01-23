@@ -1595,6 +1595,12 @@
     font-family: "JetBrains Mono", monospace;
     -webkit-border-radius: 4px;
   }
+
+  figcaption h4 {
+    color: #757575;
+    font-size: 0.75em;  
+  }
+
   .highlight figcaption {
     margin: -5px 0 5px;
     color: #757575;

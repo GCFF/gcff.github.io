@@ -6,15 +6,33 @@
     <description>Recent content in Tags on l0.ai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Jan 2021 16:53:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 19 Jan 2021 09:44:00 +0000</lastBuildDate>
     
 	<atom:link href="https://l0.ai/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>AI</title>
+      <link>https://l0.ai/tags/ai/</link>
+      <pubDate>Tue, 19 Jan 2021 09:44:00 +0000</pubDate>
+      
+      <guid>https://l0.ai/tags/ai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ARC</title>
+      <link>https://l0.ai/tags/arc/</link>
+      <pubDate>Tue, 19 Jan 2021 09:44:00 +0000</pubDate>
+      
+      <guid>https://l0.ai/tags/arc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>tech</title>
       <link>https://l0.ai/tags/tech/</link>
-      <pubDate>Mon, 11 Jan 2021 16:53:00 +0000</pubDate>
+      <pubDate>Tue, 19 Jan 2021 09:44:00 +0000</pubDate>
       
       <guid>https://l0.ai/tags/tech/</guid>
       <description></description>
@@ -26,24 +44,6 @@
       <pubDate>Mon, 11 Jan 2021 16:53:00 +0000</pubDate>
       
       <guid>https://l0.ai/tags/video-integrity/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>AI</title>
-      <link>https://l0.ai/tags/ai/</link>
-      <pubDate>Mon, 28 Dec 2020 15:45:06 +0000</pubDate>
-      
-      <guid>https://l0.ai/tags/ai/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ARC</title>
-      <link>https://l0.ai/tags/arc/</link>
-      <pubDate>Mon, 28 Dec 2020 15:45:06 +0000</pubDate>
-      
-      <guid>https://l0.ai/tags/arc/</guid>
       <description></description>
     </item>
     

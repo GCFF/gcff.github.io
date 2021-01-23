@@ -6,10 +6,19 @@
     <description>Recent content in Posts on l0.ai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Jan 2021 16:53:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 19 Jan 2021 09:44:00 +0000</lastBuildDate>
     
 	<atom:link href="https://l0.ai/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>A neuro-symbolic ARC parser</title>
+      <link>https://l0.ai/posts/2021-01-19-a-neuro-symbolic-arc-parser/</link>
+      <pubDate>Tue, 19 Jan 2021 09:44:00 +0000</pubDate>
+      
+      <guid>https://l0.ai/posts/2021-01-19-a-neuro-symbolic-arc-parser/</guid>
+      <description>Intro This previous post introduces why I think the abstraction and reasoning corpus (ARC) from this paper is a worthy challenge to pursue for robust ML research. As a quick explainer, the ARC dataset is composed of tasks like this one:   An ARC Task. The top row are the starting prompts, the bottom row are the correct answers.   In this task you can produce the correct answer by: finding objects with the same shape as the object contained by the top left grey border and recoloring those objects to grey.</description>
+    </item>
     
     <item>
       <title>This is not the full video</title>
@@ -28,8 +37,7 @@ A half baked idea As an increasing amount of user generated video on platforms l
       
       <guid>https://l0.ai/posts/2020-12-22-arc-intro/</guid>
       <description>Intro In November 2019, François Chollet released a paper called &amp;ldquo;On the measure of Intelligence&amp;rdquo;. I highly recommend you read this paper if you have interest in AGI. You can very roughly split the work into two, lopsided pieces: the paper and the abstraction and reasoning corpus (ARC) dataset.
-The ARC benchmark proposal in the paper poses a number of phsychometric tasks. From the paper itself:
- ARC can be seen as a general artificial intelligence benchmark, as a program synthesis benchmark, or as a psychometric intelligence test</description>
+There are plenty of great discussions of the paper, among them this post and a series of videos, which I suggest you read.</description>
     </item>
     
     <item>

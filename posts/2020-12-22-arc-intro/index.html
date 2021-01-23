@@ -10,8 +10,7 @@
   <meta name="googlebot" content="index,follow,snippet,archive">
   <meta property="og:title" content="Why ARC?" />
 <meta property="og:description" content="Intro In November 2019, François Chollet released a paper called &ldquo;On the measure of Intelligence&rdquo;. I highly recommend you read this paper if you have interest in AGI. You can very roughly split the work into two, lopsided pieces: the paper and the abstraction and reasoning corpus (ARC) dataset.
-The ARC benchmark proposal in the paper poses a number of phsychometric tasks. From the paper itself:
- ARC can be seen as a general artificial intelligence benchmark, as a program synthesis benchmark, or as a psychometric intelligence test" />
+There are plenty of great discussions of the paper, among them this post and a series of videos, which I suggest you read." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://l0.ai/posts/2020-12-22-arc-intro/" />
 <meta property="article:published_time" content="2020-12-28T15:45:06+00:00" />
@@ -20,15 +19,14 @@ The ARC benchmark proposal in the paper poses a number of phsychometric tasks. F
   <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Why ARC?"/>
 <meta name="twitter:description" content="Intro In November 2019, François Chollet released a paper called &ldquo;On the measure of Intelligence&rdquo;. I highly recommend you read this paper if you have interest in AGI. You can very roughly split the work into two, lopsided pieces: the paper and the abstraction and reasoning corpus (ARC) dataset.
-The ARC benchmark proposal in the paper poses a number of phsychometric tasks. From the paper itself:
- ARC can be seen as a general artificial intelligence benchmark, as a program synthesis benchmark, or as a psychometric intelligence test"/>
+There are plenty of great discussions of the paper, among them this post and a series of videos, which I suggest you read."/>
 
   
   
   
   <link rel="stylesheet" href="https://l0.ai/css/style-white.css">
   
-  
+   <link rel="stylesheet" href="https://l0.ai/css/main.css"> 
   
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -158,7 +156,7 @@ The ARC benchmark proposal in the paper poses a number of phsychometric tasks. F
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fl0.ai%2fposts%2f2020-12-22-arc-intro%2f&name=Why%20ARC%3f&description=Intro%20In%20November%202019%2c%20Fran%c3%a7ois%20Chollet%20released%20a%20paper%20called%20%26ldquo%3bOn%20the%20measure%20of%20Intelligence%26rdquo%3b.%20I%20highly%20recommend%20you%20read%20this%20paper%20if%20you%20have%20interest%20in%20AGI.%20You%20can%20very%20roughly%20split%20the%20work%20into%20two%2c%20lopsided%20pieces%3a%20the%20paper%20and%20the%20abstraction%20and%20reasoning%20corpus%20%28ARC%29%20dataset.%0aThe%20ARC%20benchmark%20proposal%20in%20the%20paper%20poses%20a%20number%20of%20phsychometric%20tasks.%20From%20the%20paper%20itself%3a%0a%20ARC%20can%20be%20seen%20as%20a%20general%20artificial%20intelligence%20benchmark%2c%20as%20a%20program%20synthesis%20benchmark%2c%20or%20as%20a%20psychometric%20intelligence%20test">
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fl0.ai%2fposts%2f2020-12-22-arc-intro%2f&name=Why%20ARC%3f&description=Intro%20In%20November%202019%2c%20Fran%c3%a7ois%20Chollet%20released%20a%20paper%20called%20%26ldquo%3bOn%20the%20measure%20of%20Intelligence%26rdquo%3b.%20I%20highly%20recommend%20you%20read%20this%20paper%20if%20you%20have%20interest%20in%20AGI.%20You%20can%20very%20roughly%20split%20the%20work%20into%20two%2c%20lopsided%20pieces%3a%20the%20paper%20and%20the%20abstraction%20and%20reasoning%20corpus%20%28ARC%29%20dataset.%0aThere%20are%20plenty%20of%20great%20discussions%20of%20the%20paper%2c%20among%20them%20this%20post%20and%20a%20series%20of%20videos%2c%20which%20I%20suggest%20you%20read.">
       <i class="fab fa-tumblr " aria-hidden="true"></i>
     </a>
   </li>
@@ -221,25 +219,32 @@ The ARC benchmark proposal in the paper poses a number of phsychometric tasks. F
     <div class="content" itemprop="articleBody">
       <h3 id="intro">Intro</h3>
 <p>In November 2019, <a href="https://scholar.google.com/citations?user=VfYhf2wAAAAJ&amp;hl=en&amp;oi=ao">François Chollet</a> released a paper called <a href="https://arxiv.org/abs/1911.01547">&ldquo;On the measure of Intelligence&rdquo;</a>. I <strong>highly recommend</strong> you read this paper if you have interest in AGI. You can very roughly <strong>split the work into two</strong>, lopsided pieces: the paper and the abstraction and reasoning corpus (<a href="https://github.com/fchollet/ARC">ARC</a>) dataset.</p>
+<p>There are plenty of great discussions of the paper, among them <a href="https://towardsdatascience.com/on-on-the-measure-of-intelligence-by-f-chollet-2019-9c78f8546dc4">this post</a> and a series of <a href="https://www.youtube.com/watch?v=3_qGrmD6iQY&amp;ab_channel=YannicKilcher">videos</a>, which I suggest you read.</p>
 <p>The ARC benchmark proposal in the paper poses a number of phsychometric tasks. From the paper itself:</p>
 <blockquote>
 <p>ARC can be seen as a general artificial intelligence benchmark, as a program synthesis benchmark, or as a psychometric intelligence test</p>
 </blockquote>
 <p>Tasks in the dataset look like this:
-<img src="../image-20200622092528619.png" alt="image"></p>
-<p>I think the ARC dataset laid out in Chollet&rsquo;s paper <strong>is one of the best characterisations</strong> of the requirements <strong>of robust machine intelligence</strong> which currently exist. The paper provides a clear and comprehensive definition of intelligence to goal on and the data set materializes it&rsquo;s requirements.</p>
+<figure>
+    <img src="../image-20200622092528619.png"/> <figcaption>
+            <h4>The top row are the starting prompts, the bottom row are the correct answers.</h4>
+        </figcaption>
+</figure>
+</p>
+<p>To solve the task above, you would have to understand an <em>object</em> is being <em>contained</em> by a frame made up of four points (one in each corner). You would select this object and <em>recolor</em> the object, using the <em>color</em> of the frame&rsquo;s points. Finally, you&rsquo;d understand the output is <em>only</em> the selected and recoloured object.</p>
 <h3 id="why-arc">Why ARC?</h3>
+<p>I think the ARC dataset laid out in Chollet&rsquo;s paper <strong>is one of the best characterisations</strong> of the requirements <strong>of robust machine intelligence</strong> which currently exist. The paper provides a clear and comprehensive definition of intelligence to goal on and the data set materializes it&rsquo;s requirements.</p>
 <p>Two fundamental considerations in the design of ARC tasks are:</p>
 <ul>
-<li><strong>well constrained assumptions about priors</strong> required for solving them. They assume a closed set of <em>previous knowledge</em> like what an object is (<em>objectness</em>) or that a dot may represent an agent trying get to a specific spot (<em>goal directedness</em>)</li>
+<li><strong>well constrained assumptions about priors</strong> are required to solve a task. Tasks assume a closed set of <em>previous knowledge</em>, like what an object is (<em>objectness</em>) or that a dot may represent an agent trying get to a specific spot (<em>goal directedness</em>)</li>
 <li><strong>limited experience</strong>, in the form of a small number of samples per task (1-10), and a small number of samples altogether (400)</li>
 </ul>
 <p>These two considerations pose an interesting interplay.</p>
 <ul>
-<li><em><strong>The limited experience</strong></em> (in the form of a small dataset) seems to limit large end to end models that would require a large number of parameters. <strong>There isn&rsquo;t enough experience to learn or evolve the right model!</strong></li>
-<li><em><strong>The constrained assumptions about priors</strong></em> though, provide a hint. These priors, like the perception of topology or geometry, are good candidates for big models to encode from larger datasets that describe ARC world.  They are also limited. That is, there is a limited number of models/datasets required to encode these priors.</li>
+<li><em><strong>The limited experience</strong></em> (in the form of a small dataset) would likely limit large end to end models that require a large number of parameters. <strong>There isn&rsquo;t enough experience to learn or evolve the right model!</strong></li>
+<li><em><strong>The constrained assumptions about priors</strong></em> , like the perception of topology or geometry, are good candidates for big models to encode from larger datasets that describe ARC world, those priors.</li>
 </ul>
-<p><strong>So why ARC ?</strong> I think ARC forces researchers to consider how two modes of building machine learning (symbolic and approximative) should co-exist in order to build general AI. In doing so, it&rsquo;ll encourage practitioners to consider hybrid systems for far less ambitions tasks, that could potentially be much more robust, efficient and perhaps understadable.</p>
+<p><strong>So why ARC ?</strong> I think ARC forces researchers to consider how two modes of building machine learning (symbolic and approximative) should co-exist in order to build systems that exhibit more general intelligence. In doing so, it&rsquo;ll encourage practitioners to consider hybrid systems for far less ambitious tasks, that could potentially be much more robust, efficient and perhaps understadable.</p>
 
     </div>
   </article>
@@ -333,7 +338,7 @@ The ARC benchmark proposal in the paper poses a number of phsychometric tasks. F
     </a>
   </li>
   <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fl0.ai%2fposts%2f2020-12-22-arc-intro%2f&name=Why%20ARC%3f&description=Intro%20In%20November%202019%2c%20Fran%c3%a7ois%20Chollet%20released%20a%20paper%20called%20%26ldquo%3bOn%20the%20measure%20of%20Intelligence%26rdquo%3b.%20I%20highly%20recommend%20you%20read%20this%20paper%20if%20you%20have%20interest%20in%20AGI.%20You%20can%20very%20roughly%20split%20the%20work%20into%20two%2c%20lopsided%20pieces%3a%20the%20paper%20and%20the%20abstraction%20and%20reasoning%20corpus%20%28ARC%29%20dataset.%0aThe%20ARC%20benchmark%20proposal%20in%20the%20paper%20poses%20a%20number%20of%20phsychometric%20tasks.%20From%20the%20paper%20itself%3a%0a%20ARC%20can%20be%20seen%20as%20a%20general%20artificial%20intelligence%20benchmark%2c%20as%20a%20program%20synthesis%20benchmark%2c%20or%20as%20a%20psychometric%20intelligence%20test">
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fl0.ai%2fposts%2f2020-12-22-arc-intro%2f&name=Why%20ARC%3f&description=Intro%20In%20November%202019%2c%20Fran%c3%a7ois%20Chollet%20released%20a%20paper%20called%20%26ldquo%3bOn%20the%20measure%20of%20Intelligence%26rdquo%3b.%20I%20highly%20recommend%20you%20read%20this%20paper%20if%20you%20have%20interest%20in%20AGI.%20You%20can%20very%20roughly%20split%20the%20work%20into%20two%2c%20lopsided%20pieces%3a%20the%20paper%20and%20the%20abstraction%20and%20reasoning%20corpus%20%28ARC%29%20dataset.%0aThere%20are%20plenty%20of%20great%20discussions%20of%20the%20paper%2c%20among%20them%20this%20post%20and%20a%20series%20of%20videos%2c%20which%20I%20suggest%20you%20read.">
       <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
     </a>
   </li>

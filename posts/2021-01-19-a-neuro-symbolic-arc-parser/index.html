@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> A neuro-symbolic ARC parser | l0.ai</title>
+  <meta name="description" content="l0.ai is where I {guillermo christen} write about technology: machine learning, data and labeling, management and communication.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta property="og:title" content="A neuro-symbolic ARC parser" />
+<meta property="og:description" content="Intro This previous post introduces why I think the abstraction and reasoning corpus (ARC) from this paper is a worthy challenge to pursue for robust ML research. As a quick explainer, the ARC dataset is composed of tasks like this one:   An ARC Task. The top row are the starting prompts, the bottom row are the correct answers.   In this task you can produce the correct answer by: finding objects with the same shape as the object contained by the top left grey border and recoloring those objects to grey." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://l0.ai/posts/2021-01-19-a-neuro-symbolic-arc-parser/" />
+<meta property="article:published_time" content="2021-01-19T09:44:00+00:00" />
+<meta property="article:modified_time" content="2021-01-19T09:44:00+00:00" />
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="A neuro-symbolic ARC parser"/>
+<meta name="twitter:description" content="Intro This previous post introduces why I think the abstraction and reasoning corpus (ARC) from this paper is a worthy challenge to pursue for robust ML research. As a quick explainer, the ARC dataset is composed of tasks like this one:   An ARC Task. The top row are the starting prompts, the bottom row are the correct answers.   In this task you can produce the correct answer by: finding objects with the same shape as the object contained by the top left grey border and recoloring those objects to grey."/>
+
+  
+  
+  
+  <link rel="stylesheet" href="https://l0.ai/css/style-white.css">
+  
+   <link rel="stylesheet" href="https://l0.ai/css/main.css"> 
+  
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+<link rel="icon" type="image/png" href="https://l0.ai/images/favicon.ico" />
+
+  
+    
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J7MP7KW334"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-J7MP7KW334');
+  </script>  
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+  <div class="content index py4">
+
+  <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+        <li><a href="/">Home</a></li>
+         
+        <li><a href="/posts">Writings</a></li>
+         
+        <li><a href="/about">About</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li>
+          <a class="icon" href=" https://l0.ai/posts/2021-01-11-this-is-not-the-whole-video/">
+            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');">
+            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#">
+            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
+          </a>
+        </li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fl0.ai%2fposts%2f2021-01-19-a-neuro-symbolic-arc-parser%2f">
+      <i class="fab fa-facebook " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fl0.ai%2fposts%2f2021-01-19-a-neuro-symbolic-arc-parser%2f&text=A%20neuro-symbolic%20ARC%20parser">
+      <i class="fab fa-twitter " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fl0.ai%2fposts%2f2021-01-19-a-neuro-symbolic-arc-parser%2f&title=A%20neuro-symbolic%20ARC%20parser">
+      <i class="fab fa-linkedin " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fl0.ai%2fposts%2f2021-01-19-a-neuro-symbolic-arc-parser%2f&is_video=false&description=A%20neuro-symbolic%20ARC%20parser">
+      <i class="fab fa-pinterest " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=A%20neuro-symbolic%20ARC%20parser&body=Check out this article: https%3a%2f%2fl0.ai%2fposts%2f2021-01-19-a-neuro-symbolic-arc-parser%2f">
+      <i class="fas fa-envelope " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fl0.ai%2fposts%2f2021-01-19-a-neuro-symbolic-arc-parser%2f&title=A%20neuro-symbolic%20ARC%20parser">
+      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2021-01-19-a-neuro-symbolic-arc-parser%2f&title=A%20neuro-symbolic%20ARC%20parser">
+      <i class="fab fa-reddit " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.stumbleupon.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2021-01-19-a-neuro-symbolic-arc-parser%2f&title=A%20neuro-symbolic%20ARC%20parser">
+      <i class="fab fa-stumbleupon " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://digg.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2021-01-19-a-neuro-symbolic-arc-parser%2f&title=A%20neuro-symbolic%20ARC%20parser">
+      <i class="fab fa-digg " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fl0.ai%2fposts%2f2021-01-19-a-neuro-symbolic-arc-parser%2f&name=A%20neuro-symbolic%20ARC%20parser&description=Intro%20This%20previous%20post%20introduces%20why%20I%20think%20the%20abstraction%20and%20reasoning%20corpus%20%28ARC%29%20from%20this%20paper%20is%20a%20worthy%20challenge%20to%20pursue%20for%20robust%20ML%20research.%20As%20a%20quick%20explainer%2c%20the%20ARC%20dataset%20is%20composed%20of%20tasks%20like%20this%20one%3a%20%20%20An%20ARC%20Task.%20The%20top%20row%20are%20the%20starting%20prompts%2c%20the%20bottom%20row%20are%20the%20correct%20answers.%20%20%20In%20this%20task%20you%20can%20produce%20the%20correct%20answer%20by%3a%20finding%20objects%20with%20the%20same%20shape%20as%20the%20object%20contained%20by%20the%20top%20left%20grey%20border%20and%20recoloring%20those%20objects%20to%20grey.">
+      <i class="fab fa-tumblr " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fl0.ai%2fposts%2f2021-01-19-a-neuro-symbolic-arc-parser%2f&t=A%20neuro-symbolic%20ARC%20parser">
+      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#intro">Intro</a></li>
+        <li><a href="#two-different-approaches">Two different approaches</a>
+          <ul>
+            <li><a href="#direct-programe-synthesis">Direct programe synthesis</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+  </span>
+</div>
+
+
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+      <h1 class="posttitle" itemprop="name headline">
+        A neuro-symbolic ARC parser
+      </h1>
+      <div class="meta">
+        
+        <div class="postdate">
+          
+          <time datetime="2021-01-19 09:44:00 &#43;0000 UTC" itemprop="datePublished">2021-01-19</time>
+          
+        </div>
+        
+        
+        <div class="article-tag">
+            <i class="fas fa-tag"></i>
+            
+            
+            <a class="tag-link" href="/tags/arc" rel="tag">ARC</a>
+            
+             ,  
+            <a class="tag-link" href="/tags/ai" rel="tag">AI</a>
+            
+             ,  
+            <a class="tag-link" href="/tags/tech" rel="tag">tech</a>
+            
+        </div>
+        
+      </div>
+    </header>
+
+  
+    <div class="content" itemprop="articleBody">
+      <h3 id="intro">Intro</h3>
+<p><a href="https://l0.ai/posts/2020-12-22-arc-intro/">This</a> previous post introduces why I think the abstraction and reasoning corpus (<a href="https://github.com/fchollet/ARC">ARC</a>) from this <a href="https://arxiv.org/abs/1911.01547">paper</a> is a worthy challenge to pursue for robust ML research. As a quick explainer, the ARC dataset is composed of tasks like this one:
+<figure>
+    <img src="../image-20200622101334248.png"/> <figcaption>
+            <h4>An ARC Task. The top row are the starting prompts, the bottom row are the correct answers.</h4>
+        </figcaption>
+</figure>
+
+In this task you can produce the correct answer by: finding objects with the same shape as the object contained by the top left grey border and recoloring those objects to grey.</p>
+<p>There are more (and less) general solutions to this task (e.g <em>recolor to the same color as the border</em>). This task also shows some the priors that are assumed:  <em>the concept of an object</em>,  <em>the idea of a relationship between objects and the idea of containment</em></p>
+<h3 id="two-different-approaches">Two different approaches</h3>
+<h4 id="direct-programe-synthesis">Direct programe synthesis</h4>
+<p>The first approach that comes to mind for ARC is program synthesis. F.Chollet directly suggests this route. Specficially, building a model $f_{\theta}(X, Y) = p$ that attends over each task&rsquo;s support set of input images $x_i \in X$ and label images $y_i \in Y$, and produces a program $p$, such that $p(X)=Y$. This would likely imply a search step, to select/rank programs produced by $f_{\theta}$.</p>
+<p>The design of ARC makes a direct <em>brute force</em> implmentation difficult for a number of reasons, among them:</p>
+<ul>
+<li>Large number of diverse tasks (400)</li>
+<li>Differeing priors required for difering tasks</li>
+<li>Very small support for each task (1-10) samples</li>
+<li>Compositional tasks: the output of one step is the basis for the next</li>
+</ul>
+<p>5</p>
+
+    </div>
+  </article>
+
+  
+  
+
+
+
+
+
+  <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/posts">Writings</a></li>
+         
+          <li><a href="/about">About</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#intro">Intro</a></li>
+        <li><a href="#two-different-approaches">Two different approaches</a>
+          <ul>
+            <li><a href="#direct-programe-synthesis">Direct programe synthesis</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fl0.ai%2fposts%2f2021-01-19-a-neuro-symbolic-arc-parser%2f">
+      <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fl0.ai%2fposts%2f2021-01-19-a-neuro-symbolic-arc-parser%2f&text=A%20neuro-symbolic%20ARC%20parser">
+      <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fl0.ai%2fposts%2f2021-01-19-a-neuro-symbolic-arc-parser%2f&title=A%20neuro-symbolic%20ARC%20parser">
+      <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fl0.ai%2fposts%2f2021-01-19-a-neuro-symbolic-arc-parser%2f&is_video=false&description=A%20neuro-symbolic%20ARC%20parser">
+      <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=A%20neuro-symbolic%20ARC%20parser&body=Check out this article: https%3a%2f%2fl0.ai%2fposts%2f2021-01-19-a-neuro-symbolic-arc-parser%2f">
+      <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fl0.ai%2fposts%2f2021-01-19-a-neuro-symbolic-arc-parser%2f&title=A%20neuro-symbolic%20ARC%20parser">
+      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2021-01-19-a-neuro-symbolic-arc-parser%2f&title=A%20neuro-symbolic%20ARC%20parser">
+      <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.stumbleupon.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2021-01-19-a-neuro-symbolic-arc-parser%2f&title=A%20neuro-symbolic%20ARC%20parser">
+      <i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://digg.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2021-01-19-a-neuro-symbolic-arc-parser%2f&title=A%20neuro-symbolic%20ARC%20parser">
+      <i class="fab fa-digg fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fl0.ai%2fposts%2f2021-01-19-a-neuro-symbolic-arc-parser%2f&name=A%20neuro-symbolic%20ARC%20parser&description=Intro%20This%20previous%20post%20introduces%20why%20I%20think%20the%20abstraction%20and%20reasoning%20corpus%20%28ARC%29%20from%20this%20paper%20is%20a%20worthy%20challenge%20to%20pursue%20for%20robust%20ML%20research.%20As%20a%20quick%20explainer%2c%20the%20ARC%20dataset%20is%20composed%20of%20tasks%20like%20this%20one%3a%20%20%20An%20ARC%20Task.%20The%20top%20row%20are%20the%20starting%20prompts%2c%20the%20bottom%20row%20are%20the%20correct%20answers.%20%20%20In%20this%20task%20you%20can%20produce%20the%20correct%20answer%20by%3a%20finding%20objects%20with%20the%20same%20shape%20as%20the%20object%20contained%20by%20the%20top%20left%20grey%20border%20and%20recoloring%20those%20objects%20to%20grey.">
+      <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fl0.ai%2fposts%2f2021-01-19-a-neuro-symbolic-arc-parser%2f&t=A%20neuro-symbolic%20ARC%20parser">
+      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;">
+          <i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;">
+          <i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;">
+          <i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');">
+          <i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+
+  <footer id="footer">
+  <div class="footer-left">
+    Copyright  &copy; 2021  l0.ai 
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+        <li><a href="/">Home</a></li>
+         
+        <li><a href="/posts">Writings</a></li>
+         
+        <li><a href="/about">About</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+
+  </div>
+</body>
+
+<link rel="stylesheet" href=/lib/font-awesome/css/all.min.css>
+<script src=/lib/jquery/jquery.min.js></script>
+<script src=/js/main.js></script>
+
+
+  
+
+
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+</html>
