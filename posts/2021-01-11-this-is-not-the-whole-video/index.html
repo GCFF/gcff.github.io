@@ -218,7 +218,7 @@
 <h3 id="a-half-baked-idea">A half baked idea</h3>
 <p>As an increasing amount of user generated video on platforms like Youtube, Twitter and Facebook cover current events - and become part of the ‘news’ - a significant (though certainly not new) problem arises for the viewer: <em><strong>can I trust this content?</strong></em></p>
 <p>Trust is built by consistency and transparency over time. A simpler question to ask of a piece of content is: Is this video edited in a tendencious way? Simpler still: is this the whole video?</p>
-<p>Recently, before going to sleep, I was thinking about how a tiny minority of content on platforms can be leveraged to influence large groups. This is not new: <strong><em><a href="https://www.amazon.co.uk/Manufacturing-Consent-Political-Economy-Media/dp/0099533111">content crafted for influence</a>.</em></strong> The speed of delivery is new though - predicated on platforms that depend on user generated content.** Edited videos are, I think, the most convincing: they show partial truths**. I was wondering if there was a simple way to validate to me as the user, that I’m looking at **_the full video. _**</p>
+<p>Recently, before going to sleep, I was thinking about how a tiny minority of content on platforms can be leveraged to influence large groups. This is not new: <em><strong><a href="https://www.amazon.co.uk/Manufacturing-Consent-Political-Economy-Media/dp/0099533111">content crafted for influence</a>.</strong></em> The speed of delivery is new though - <em>predicated on platforms that depend on user generated content</em>. <strong>Edited videos are, I think, the most convincing: they show partial truths.</strong> I was wondering if there was a simple way to validate to me as the user, that I’m looking at <em><strong>the full video.</strong></em></p>
 <p>So, this is a half baked idea to attempt to solve the problem (with some glaring problems) - and hopefully learn a little. Note: this is a means to learn - I’m not a video encoding, security or cryptography expert.</p>
 <h3 id="solution">Solution:</h3>
 <p><strong>Smartphone apps or cameras</strong> implement a standard that appends to each each frame the final frame’s signature. From this last signature, it should be possible to:</p>
@@ -232,7 +232,7 @@
 <p>In sequential order, sign every frame, where the signature is the current frame’s hash and the previous frame’s signature. A similar approach is proposed in <a href="https://core.ac.uk/download/pdf/82623601.pdf">this</a> ,paper to sign video streams.
 <figure>
     <img src="../streaming_record.png"/> <figcaption>
-            <h4>Each frame in a video is hashed, and a signature is created from the previous signature and the current frame. Signature B ($B), is created by hashing the hishing the current frame and signing the previous signature and the current frame </h4>
+            <h4>Each frame in a video is hashed, and a signature is created from the previous signature and the current frame. Signature B ($B), is created by hashing the current frame and signing the previous signature and the current frame </h4>
         </figcaption>
 </figure>
 </p>
@@ -408,7 +408,7 @@
 
   <footer id="footer">
   <div class="footer-left">
-    Copyright  &copy; 2021  l0.ai 
+    Copyright  &copy; 2022  l0.ai 
   </div>
   <div class="footer-right">
     <nav>
