@@ -5,3 +5,7 @@ figcaption h4 {
 article .content img {
     display: inline-block;
 }
+
+body td {
+    text-align: center;
+}
