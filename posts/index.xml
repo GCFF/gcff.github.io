@@ -6,10 +6,20 @@
     <description>Recent content in Posts on l0.ai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 17 Sep 2022 16:25:06 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 29 Oct 2022 09:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://l0.ai/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>The rhetorical triangle</title>
+      <link>https://l0.ai/posts/2022-10-29-rhetorical-triangle/</link>
+      <pubDate>Sat, 29 Oct 2022 09:00:00 +0000</pubDate>
+      
+      <guid>https://l0.ai/posts/2022-10-29-rhetorical-triangle/</guid>
+      <description>The rhetorical triangle Last Friday, I found myself using the framing of the rhetorical triangle again, in the context of an engineering management discussion. I thought I should put pen to paper given how much I use it.
+The rhetorical triangle is composed of three corners: ethos, pathos, logos. It is used in rhetrocial analysis and as a means of taking a rhetorical stance - one that is suitable for the audience and the context - in both oratory and writing.</description>
+    </item>
     
     <item>
       <title>Stable Diffusion Sketch 2-4</title>
