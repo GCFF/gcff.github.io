@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> Fast Stable Diffusion | l0.ai</title>
+  <meta name="description" content="l0.ai is where I {guillermo christen} write about technology: machine learning, data and labeling, management and communication.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta property="og:title" content="Fast Stable Diffusion" />
+<meta property="og:description" content="Fast Stable Diffusion I&rsquo;ve been playing around with Stable Diffusion recently - from just playing with prompt, to trying out Textual Inversion and Dreambooth.
+I&rsquo;ve opted not to use services or Web GUI&rsquo;s - not because I dislike them, but rather because I was looking to learn about diffusion models and the infrastructure to use them, and get amazing pictures as a side effect. Stable diffusion has this great property : it can fit in a lot of consumer grade hardware." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://l0.ai/posts/2022-11-9-fast-diffusion/" />
+<meta property="article:published_time" content="2022-11-09T20:30:00+00:00" />
+<meta property="article:modified_time" content="2022-11-09T20:30:00+00:00" />
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Fast Stable Diffusion"/>
+<meta name="twitter:description" content="Fast Stable Diffusion I&rsquo;ve been playing around with Stable Diffusion recently - from just playing with prompt, to trying out Textual Inversion and Dreambooth.
+I&rsquo;ve opted not to use services or Web GUI&rsquo;s - not because I dislike them, but rather because I was looking to learn about diffusion models and the infrastructure to use them, and get amazing pictures as a side effect. Stable diffusion has this great property : it can fit in a lot of consumer grade hardware."/>
+
+  
+  
+  
+  <link rel="stylesheet" href="https://l0.ai/css/style-white.css">
+  
+   <link rel="stylesheet" href="https://l0.ai/css/main.css"> 
+  
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+<link rel="icon" type="image/png" href="https://l0.ai/images/favicon.ico" />
+
+  
+    
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J7MP7KW334"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-J7MP7KW334');
+  </script>  
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+  <div class="content index py4">
+
+  <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+        <li><a href="/">Home</a></li>
+         
+        <li><a href="/posts">Writings</a></li>
+         
+        <li><a href="/about">About</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li>
+          <a class="icon" href=" https://l0.ai/posts/2022-11-6-stable-diffusion-3/">
+            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');">
+            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#">
+            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
+          </a>
+        </li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fl0.ai%2fposts%2f2022-11-9-fast-diffusion%2f">
+      <i class="fab fa-facebook " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fl0.ai%2fposts%2f2022-11-9-fast-diffusion%2f&text=Fast%20Stable%20Diffusion">
+      <i class="fab fa-twitter " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fl0.ai%2fposts%2f2022-11-9-fast-diffusion%2f&title=Fast%20Stable%20Diffusion">
+      <i class="fab fa-linkedin " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fl0.ai%2fposts%2f2022-11-9-fast-diffusion%2f&is_video=false&description=Fast%20Stable%20Diffusion">
+      <i class="fab fa-pinterest " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Fast%20Stable%20Diffusion&body=Check out this article: https%3a%2f%2fl0.ai%2fposts%2f2022-11-9-fast-diffusion%2f">
+      <i class="fas fa-envelope " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fl0.ai%2fposts%2f2022-11-9-fast-diffusion%2f&title=Fast%20Stable%20Diffusion">
+      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2022-11-9-fast-diffusion%2f&title=Fast%20Stable%20Diffusion">
+      <i class="fab fa-reddit " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.stumbleupon.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2022-11-9-fast-diffusion%2f&title=Fast%20Stable%20Diffusion">
+      <i class="fab fa-stumbleupon " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://digg.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2022-11-9-fast-diffusion%2f&title=Fast%20Stable%20Diffusion">
+      <i class="fab fa-digg " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fl0.ai%2fposts%2f2022-11-9-fast-diffusion%2f&name=Fast%20Stable%20Diffusion&description=Fast%20Stable%20Diffusion%20I%26rsquo%3bve%20been%20playing%20around%20with%20Stable%20Diffusion%20recently%20-%20from%20just%20playing%20with%20prompt%2c%20to%20trying%20out%20Textual%20Inversion%20and%20Dreambooth.%0aI%26rsquo%3bve%20opted%20not%20to%20use%20services%20or%20Web%20GUI%26rsquo%3bs%20-%20not%20because%20I%20dislike%20them%2c%20but%20rather%20because%20I%20was%20looking%20to%20learn%20about%20diffusion%20models%20and%20the%20infrastructure%20to%20use%20them%2c%20and%20get%20amazing%20pictures%20as%20a%20side%20effect.%20Stable%20diffusion%20has%20this%20great%20property%20%3a%20it%20can%20fit%20in%20a%20lot%20of%20consumer%20grade%20hardware.">
+      <i class="fab fa-tumblr " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fl0.ai%2fposts%2f2022-11-9-fast-diffusion%2f&t=Fast%20Stable%20Diffusion">
+      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#fast-stable-diffusion">Fast Stable Diffusion</a></li>
+  </ul>
+</nav>
+    </div>
+  </span>
+</div>
+
+
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+      <h1 class="posttitle" itemprop="name headline">
+        Fast Stable Diffusion
+      </h1>
+      <div class="meta">
+        
+        <div class="postdate">
+          
+          <time datetime="2022-11-09 20:30:00 &#43;0000 UTC" itemprop="datePublished">2022-11-09</time>
+          
+        </div>
+        
+        
+        <div class="article-tag">
+            <i class="fas fa-tag"></i>
+            
+            
+            <a class="tag-link" href="/tags/stable-diffusion" rel="tag">Stable Diffusion</a>
+            
+             ,  
+            <a class="tag-link" href="/tags/ai" rel="tag">AI</a>
+            
+             ,  
+            <a class="tag-link" href="/tags/infra" rel="tag">infra</a>
+            
+        </div>
+        
+      </div>
+    </header>
+
+  
+    <div class="content" itemprop="articleBody">
+      <h2 id="fast-stable-diffusion">Fast Stable Diffusion</h2>
+<p>I&rsquo;ve been playing around with Stable Diffusion recently - from just playing with <a href="https://l0.ai/posts/2022-09-11-stable-diffusion-sketch1/">prompt</a>, to trying out <a href="https://l0.ai/posts/2022-11-6-stable-diffusion-3/">Textual Inversion and Dreambooth</a>.</p>
+<p>I&rsquo;ve opted not to use <a href="https://www.astria.ai/">services</a> or Web <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui">GUI&rsquo;s</a> - not because I dislike them, but rather because I was looking to learn about diffusion models and the infrastructure to use them, and get amazing pictures as a side effect. Stable diffusion has this <em>great</em> property : it can fit in a lot of consumer grade hardware. Specifically, if you have a GPU with about 14GB of memory you can run SD relatively quickly, and indeed there are optimised versions that allow you to run it on even smaller amounts of memory. You can even <a href="https://replicate.com/blog/run-stable-diffusion-on-m1-mac">run it</a> on an M1 or M2 Mac - no external GPU required, no DALLE2 credits.</p>
+<p>Since I knew I wanted to both run (inference) and train (fine tune) a model myself plenty of times, I started looking for optimisations to increase throughput. This led me to two options <a href="https://github.com/facebookresearch/xformers">xformers</a> and <a href="https://hazyresearch.stanford.edu/blog/2022-10-12-flashattention-diffusion">work</a> from Chris Ré&rsquo;s lab Hazy research (I&rsquo;m a fan of Chris from his work on <a href="https://github.com/snorkel-team/snorkel">Snorkel</a>).  I chose the the Flash Attention route from Hazy Research.</p>
+<p>This post is just the steps I took to get the a faster stable diffusion on an A100 GPU I could. Ultimately, this is the first step in getting the fastest stable diffusion I can on an A100. Next in my list is DeepSpeed.</p>
+<p>For now though, the following steps get you <strong>very</strong> transformers (which are used in SD):</p>
+<ol>
+<li><strong><a href="https://developer.nvidia.com/cuda-downloads">Upgrade</a> Cuda to 11.8</strong> (assumes you have a machine with an older version of cuda)</li>
+</ol>
+<ul>
+<li>
+<p>check pytorch <a href="https://discuss.pytorch.org/t/is-there-a-table-which-shows-the-supported-cuda-version-for-every-pytorch-version/105846">compatibility</a>  here: <a href="https://pytorch.org/get-started/locally/">https://pytorch.org/get-started/locally/</a></p>
+</li>
+<li>
+<p>Also make sure the have the right GPU and driver, you can find driver &lt;&gt; cuda compatibility <a href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html">here</a> if you need</p>
+</li>
+<li>
+<p>make sure you have <a href="https://forums.developer.nvidia.com/t/cuda-install-unmet-dependencies-cuda-depends-cuda-10-0-10-0-130-but-it-is-not-going-to-be-installed/66488/5">cleaned up</a> previous version of CUDA! You can check which versions you have locally and remotely using <a href="https://askubuntu.com/questions/447/how-can-i-see-all-versions-of-a-package-that-are-available-in-the-archive">this</a></p>
+</li>
+<li>
+<p>add Keys from NVIDIA, they rotated their keys in April so this was a bit fiddly:</p>
+</li>
+<li>
+<pre><code>sudo apt-key adv --fetch-keys 	https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/3bf863cc.pub       
+sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1804/x86_64/7fa2af80.pub
+</code></pre></li>
+<li>
+<p>download the highest compatible version of the cuda toolkit and install it</p>
+</li>
+<li>
+<p>after installation, set your path and LD_LIBRARY_PATH</p>
+</li>
+<li>
+<pre><code>export PATH=&quot;/usr/local/cuda-11.8/bin:$PATH&quot;
+export LD_LIBRARY_PATH=&quot;/usr/local/cuda-11.8/lib64:$LD_LIBRARY_PATH&quot;
+</code></pre></li>
+<li>
+<p>I ran into an issue - missing Python.h. Solution can be found <a href="https://bobbyhadz.com/blog/python-fatal-error-python-h-no-such-file-or-directory">here</a></p>
+<ul>
+<li><code>sudo apt-get install python3.8-dev build-essential</code></li>
+</ul>
+</li>
+</ul>
+<ol start="2">
+<li>
+<p><strong>Clone the flash attention <a href="https://github.com/HazyResearch/flash-attention">repo</a></strong> and build it</p>
+<pre><code>git clone https://github.com/HazyResearch/flash-attention.git
+cd flash-attention
+git submodule init
+git submodule update
+python setup.py install
+cd ..
+</code></pre></li>
+<li>
+<p><strong>Clone the HazyResearch <a href="https://github.com/HazyResearch/diffusers">repo</a> of diffusers</strong> and build it</p>
+<pre><code>git clone https://github.com/HazyResearch/diffusers.git
+cd diffusers
+pip install --prefix=~/.local -e .
+</code></pre></li>
+</ol>
+
+    </div>
+  </article>
+
+  
+  
+
+
+
+
+
+  <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/posts">Writings</a></li>
+         
+          <li><a href="/about">About</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#fast-stable-diffusion">Fast Stable Diffusion</a></li>
+  </ul>
+</nav>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fl0.ai%2fposts%2f2022-11-9-fast-diffusion%2f">
+      <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fl0.ai%2fposts%2f2022-11-9-fast-diffusion%2f&text=Fast%20Stable%20Diffusion">
+      <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fl0.ai%2fposts%2f2022-11-9-fast-diffusion%2f&title=Fast%20Stable%20Diffusion">
+      <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fl0.ai%2fposts%2f2022-11-9-fast-diffusion%2f&is_video=false&description=Fast%20Stable%20Diffusion">
+      <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Fast%20Stable%20Diffusion&body=Check out this article: https%3a%2f%2fl0.ai%2fposts%2f2022-11-9-fast-diffusion%2f">
+      <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fl0.ai%2fposts%2f2022-11-9-fast-diffusion%2f&title=Fast%20Stable%20Diffusion">
+      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2022-11-9-fast-diffusion%2f&title=Fast%20Stable%20Diffusion">
+      <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.stumbleupon.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2022-11-9-fast-diffusion%2f&title=Fast%20Stable%20Diffusion">
+      <i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://digg.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2022-11-9-fast-diffusion%2f&title=Fast%20Stable%20Diffusion">
+      <i class="fab fa-digg fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fl0.ai%2fposts%2f2022-11-9-fast-diffusion%2f&name=Fast%20Stable%20Diffusion&description=Fast%20Stable%20Diffusion%20I%26rsquo%3bve%20been%20playing%20around%20with%20Stable%20Diffusion%20recently%20-%20from%20just%20playing%20with%20prompt%2c%20to%20trying%20out%20Textual%20Inversion%20and%20Dreambooth.%0aI%26rsquo%3bve%20opted%20not%20to%20use%20services%20or%20Web%20GUI%26rsquo%3bs%20-%20not%20because%20I%20dislike%20them%2c%20but%20rather%20because%20I%20was%20looking%20to%20learn%20about%20diffusion%20models%20and%20the%20infrastructure%20to%20use%20them%2c%20and%20get%20amazing%20pictures%20as%20a%20side%20effect.%20Stable%20diffusion%20has%20this%20great%20property%20%3a%20it%20can%20fit%20in%20a%20lot%20of%20consumer%20grade%20hardware.">
+      <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fl0.ai%2fposts%2f2022-11-9-fast-diffusion%2f&t=Fast%20Stable%20Diffusion">
+      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;">
+          <i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;">
+          <i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;">
+          <i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');">
+          <i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+
+  <footer id="footer">
+  <div class="footer-left">
+    Copyright  &copy; 2022  l0.ai 
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+        <li><a href="/">Home</a></li>
+         
+        <li><a href="/posts">Writings</a></li>
+         
+        <li><a href="/about">About</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+
+  </div>
+</body>
+
+<link rel="stylesheet" href=/lib/font-awesome/css/all.min.css>
+<script src=/lib/jquery/jquery.min.js></script>
+<script src=/js/main.js></script>
+
+
+
+</html>

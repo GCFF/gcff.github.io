@@ -6,7 +6,7 @@
     <description>Recent content in Tags on l0.ai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 06 Nov 2022 09:25:06 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 09 Nov 2022 20:30:00 +0000</lastBuildDate>
     
 	<atom:link href="https://l0.ai/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,27 @@
     <item>
       <title>AI</title>
       <link>https://l0.ai/tags/ai/</link>
-      <pubDate>Sun, 06 Nov 2022 09:25:06 +0000</pubDate>
+      <pubDate>Wed, 09 Nov 2022 20:30:00 +0000</pubDate>
       
       <guid>https://l0.ai/tags/ai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>infra</title>
+      <link>https://l0.ai/tags/infra/</link>
+      <pubDate>Wed, 09 Nov 2022 20:30:00 +0000</pubDate>
+      
+      <guid>https://l0.ai/tags/infra/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Stable Diffusion</title>
+      <link>https://l0.ai/tags/stable-diffusion/</link>
+      <pubDate>Wed, 09 Nov 2022 20:30:00 +0000</pubDate>
+      
+      <guid>https://l0.ai/tags/stable-diffusion/</guid>
       <description></description>
     </item>
     
@@ -35,15 +53,6 @@
       <pubDate>Sun, 06 Nov 2022 09:25:06 +0000</pubDate>
       
       <guid>https://l0.ai/tags/dreambooth/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Stable Diffusion</title>
-      <link>https://l0.ai/tags/stable-diffusion/</link>
-      <pubDate>Sun, 06 Nov 2022 09:25:06 +0000</pubDate>
-      
-      <guid>https://l0.ai/tags/stable-diffusion/</guid>
       <description></description>
     </item>
     
