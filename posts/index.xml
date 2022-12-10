@@ -6,10 +6,19 @@
     <description>Recent content in Posts on l0.ai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 Nov 2022 20:30:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 10 Dec 2022 18:30:00 +0000</lastBuildDate>
     
 	<atom:link href="https://l0.ai/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Neurips Wrapup Post 1</title>
+      <link>https://l0.ai/posts/2022-12-10-neurips-2022-1/</link>
+      <pubDate>Sat, 10 Dec 2022 18:30:00 +0000</pubDate>
+      
+      <guid>https://l0.ai/posts/2022-12-10-neurips-2022-1/</guid>
+      <description>Neurips 2022 - A wrap up post #1   Neurips 2022 has just finished - and it was a great conference! It was my first proper conference since Covid, and it was so much fun. I don&amp;rsquo;t go to Neurips to present, but rather to absorb. Over time, it has become part of my yearly calendar that I really look forward to. It&amp;rsquo;s a chance to reconnect with what is happening at the edge of deep learning.</description>
+    </item>
     
     <item>
       <title>Fast Stable Diffusion</title>
