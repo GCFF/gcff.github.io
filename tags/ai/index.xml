@@ -45,7 +45,7 @@ I&amp;rsquo;ve opted not to use services or Web GUI&amp;rsquo;s - not because I 
       <pubDate>Sat, 17 Sep 2022 16:25:06 +0000</pubDate>
       
       <guid>https://l0.ai/posts/2022-09-17-stable-diffusion-sketch2/</guid>
-      <description>Sketch 2 Sketch 3 Sketch 4   As I continue to explore Stable Diffusion, I&amp;rsquo;m more and more impressed by a few things: some grasp of compositionality, wide breadth of concepts or semantics in the model and very impressive quality in it&amp;rsquo;s generations. The images below weren&amp;rsquo;t hand picked, I&amp;rsquo;ve put other generations here too.
+      <description>Sketch 2 Sketch 3 Sketch 4   As I continue to explore Stable Diffusion, I&amp;rsquo;m more and more impressed by a few things: some grasp of compositionality, wide breadth of concepts or semantics in the model and very impressive quality in its generations. The images below weren&amp;rsquo;t hand picked, I&amp;rsquo;ve put other generations here too.
 Sketch 2 Prompt: : &amp;ldquo;Low poly art of a floating island sourrounded by waterfalls with a japanese temple built with red wood, isometric art, 3d render, ray tracing, high detail, artstation, concept art, behance, smooth, sharp focus, ethereal lighting, unreal engine 5&amp;rdquo;</description>
     </item>
     
@@ -57,7 +57,7 @@ Sketch 2 Prompt: : &amp;ldquo;Low poly art of a floating island sourrounded by w
       <guid>https://l0.ai/posts/2022-09-11-stable-diffusion-sketch1/</guid>
       <description>Sketch 1 Prompt: &amp;ldquo;Pixar Style, puppy schnauzer adventurer, blue eye, tiny cute adorable, villain, unreal engine, dramatic lighting, 8k, portrait, 50mm&amp;rdquo;
   generated image of Miniture Shcnauzer cartoon   Stable Diffusion is pretty incredible. It&amp;rsquo;s a multi-modal generative model, most easily used through hugging face, that you do not need to pay for, unlike DALLE-2 or Midjourney.
-It is fascinating, and really highlights a questions that now feels a little old and yet somehow super relevant: will there be a labour market for prompt engineers?</description>
+It is fascinating, and really highlights a question that now feels a little old and yet somehow super relevant: will there be a labour market for prompt engineers?</description>
     </item>
     
     <item>

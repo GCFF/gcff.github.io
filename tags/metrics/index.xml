@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>metrics on l0.ai</title>
+    <link>https://l0.ai/tags/metrics/</link>
+    <description>Recent content in metrics on l0.ai</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 03 Feb 2023 08:07:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://l0.ai/tags/metrics/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Devlivery Metrics</title>
+      <link>https://l0.ai/posts/2023-02-03-delivery-metrics/</link>
+      <pubDate>Fri, 03 Feb 2023 08:07:00 +0000</pubDate>
+      
+      <guid>https://l0.ai/posts/2023-02-03-delivery-metrics/</guid>
+      <description>Delivery Metrics Delivery metrics are critical to understanding your teams&amp;rsquo; performance - but, this truth stems from something much deeper and important: value. Delivery metrics are a model teams use to undertstand the delivery of value, often before that value materialises into a terminal outcome (quite often financial).
+The common stats aphorism &amp;ldquo;All models are wrong, but some are useful&amp;rdquo; holds true for delivery metrics too - so more than just finding the right metric, as an engineering manager, you are looking to create an environment where squads seek to continuosly improve their understanding of value delivery.</description>
+    </item>
+    
+  </channel>
+</rss>
