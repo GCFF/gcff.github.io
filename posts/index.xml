@@ -6,10 +6,22 @@
     <description>Recent content in Posts on l0.ai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 04 Feb 2023 10:17:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 11 Feb 2023 12:55:00 +0000</lastBuildDate>
     
 	<atom:link href="https://l0.ai/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Devlivery cadence and capacity, a team&#39;s delivery does not grow linearly with size</title>
+      <link>https://l0.ai/posts/2023-02-11-devlivery-cadence-and-capacity-a-teams-delivery-does-not-grow-linearly/</link>
+      <pubDate>Sat, 11 Feb 2023 12:55:00 +0000</pubDate>
+      
+      <guid>https://l0.ai/posts/2023-02-11-devlivery-cadence-and-capacity-a-teams-delivery-does-not-grow-linearly/</guid>
+      <description>A significant part of my job in the past has been to plan for the growth of an engineering organization. There are a number of things to consider when doing this:
+Why do we need the growth? Really though, specifically what value do you intend to create with the growth? This first concern should be obvious, but being comprehensive pays dividends later.
+Why are you growing?
+What business value do you intend to deliver with that growth?</description>
+    </item>
     
     <item>
       <title>Selecting high potential individuals and the moral quandry N. 1</title>

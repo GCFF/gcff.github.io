@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> Devlivery cadence and capacity, a team&#39;s delivery does not grow linearly with size | l0.ai</title>
+  <meta name="description" content="l0.ai is where I {guillermo christen} write about technology: machine learning, data and labeling, management and communication.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta property="og:title" content="Devlivery cadence and capacity, a team&#39;s delivery does not grow linearly with size" />
+<meta property="og:description" content="A significant part of my job in the past has been to plan for the growth of an engineering organization. There are a number of things to consider when doing this:
+Why do we need the growth? Really though, specifically what value do you intend to create with the growth? This first concern should be obvious, but being comprehensive pays dividends later.
+Why are you growing?
+What business value do you intend to deliver with that growth?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://l0.ai/posts/2023-02-11-devlivery-cadence-and-capacity-a-teams-delivery-does-not-grow-linearly/" />
+<meta property="article:published_time" content="2023-02-11T12:55:00+00:00" />
+<meta property="article:modified_time" content="2023-02-11T12:55:00+00:00" />
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Devlivery cadence and capacity, a team&#39;s delivery does not grow linearly with size"/>
+<meta name="twitter:description" content="A significant part of my job in the past has been to plan for the growth of an engineering organization. There are a number of things to consider when doing this:
+Why do we need the growth? Really though, specifically what value do you intend to create with the growth? This first concern should be obvious, but being comprehensive pays dividends later.
+Why are you growing?
+What business value do you intend to deliver with that growth?"/>
+
+  
+  
+  
+  <link rel="stylesheet" href="https://l0.ai/css/style-white.css">
+  
+   <link rel="stylesheet" href="https://l0.ai/css/main.css"> 
+  
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+<link rel="icon" type="image/png" href="https://l0.ai/images/favicon.ico" />
+
+  
+    
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J7MP7KW334"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-J7MP7KW334');
+  </script>  
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+  <div class="content index py4">
+
+  <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+        <li><a href="/">Home</a></li>
+         
+        <li><a href="/posts">Writings</a></li>
+         
+        <li><a href="/about">About</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li>
+          <a class="icon" href=" https://l0.ai/posts/2023-02-04-with-limited-time-who-do-you-support/">
+            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');">
+            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#">
+            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
+          </a>
+        </li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fl0.ai%2fposts%2f2023-02-11-devlivery-cadence-and-capacity-a-teams-delivery-does-not-grow-linearly%2f">
+      <i class="fab fa-facebook " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fl0.ai%2fposts%2f2023-02-11-devlivery-cadence-and-capacity-a-teams-delivery-does-not-grow-linearly%2f&text=Devlivery%20cadence%20and%20capacity%2c%20a%20team%27s%20delivery%20does%20not%20grow%20linearly%20with%20size">
+      <i class="fab fa-twitter " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fl0.ai%2fposts%2f2023-02-11-devlivery-cadence-and-capacity-a-teams-delivery-does-not-grow-linearly%2f&title=Devlivery%20cadence%20and%20capacity%2c%20a%20team%27s%20delivery%20does%20not%20grow%20linearly%20with%20size">
+      <i class="fab fa-linkedin " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fl0.ai%2fposts%2f2023-02-11-devlivery-cadence-and-capacity-a-teams-delivery-does-not-grow-linearly%2f&is_video=false&description=Devlivery%20cadence%20and%20capacity%2c%20a%20team%27s%20delivery%20does%20not%20grow%20linearly%20with%20size">
+      <i class="fab fa-pinterest " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Devlivery%20cadence%20and%20capacity%2c%20a%20team%27s%20delivery%20does%20not%20grow%20linearly%20with%20size&body=Check out this article: https%3a%2f%2fl0.ai%2fposts%2f2023-02-11-devlivery-cadence-and-capacity-a-teams-delivery-does-not-grow-linearly%2f">
+      <i class="fas fa-envelope " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fl0.ai%2fposts%2f2023-02-11-devlivery-cadence-and-capacity-a-teams-delivery-does-not-grow-linearly%2f&title=Devlivery%20cadence%20and%20capacity%2c%20a%20team%27s%20delivery%20does%20not%20grow%20linearly%20with%20size">
+      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2023-02-11-devlivery-cadence-and-capacity-a-teams-delivery-does-not-grow-linearly%2f&title=Devlivery%20cadence%20and%20capacity%2c%20a%20team%27s%20delivery%20does%20not%20grow%20linearly%20with%20size">
+      <i class="fab fa-reddit " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.stumbleupon.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2023-02-11-devlivery-cadence-and-capacity-a-teams-delivery-does-not-grow-linearly%2f&title=Devlivery%20cadence%20and%20capacity%2c%20a%20team%27s%20delivery%20does%20not%20grow%20linearly%20with%20size">
+      <i class="fab fa-stumbleupon " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://digg.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2023-02-11-devlivery-cadence-and-capacity-a-teams-delivery-does-not-grow-linearly%2f&title=Devlivery%20cadence%20and%20capacity%2c%20a%20team%27s%20delivery%20does%20not%20grow%20linearly%20with%20size">
+      <i class="fab fa-digg " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fl0.ai%2fposts%2f2023-02-11-devlivery-cadence-and-capacity-a-teams-delivery-does-not-grow-linearly%2f&name=Devlivery%20cadence%20and%20capacity%2c%20a%20team%27s%20delivery%20does%20not%20grow%20linearly%20with%20size&description=A%20significant%20part%20of%20my%20job%20in%20the%20past%20has%20been%20to%20plan%20for%20the%20growth%20of%20an%20engineering%20organization.%20There%20are%20a%20number%20of%20things%20to%20consider%20when%20doing%20this%3a%0aWhy%20do%20we%20need%20the%20growth%3f%20Really%20though%2c%20specifically%20what%20value%20do%20you%20intend%20to%20create%20with%20the%20growth%3f%20This%20first%20concern%20should%20be%20obvious%2c%20but%20being%20comprehensive%20pays%20dividends%20later.%0aWhy%20are%20you%20growing%3f%0aWhat%20business%20value%20do%20you%20intend%20to%20deliver%20with%20that%20growth%3f">
+      <i class="fab fa-tumblr " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fl0.ai%2fposts%2f2023-02-11-devlivery-cadence-and-capacity-a-teams-delivery-does-not-grow-linearly%2f&t=Devlivery%20cadence%20and%20capacity%2c%20a%20team%27s%20delivery%20does%20not%20grow%20linearly%20with%20size">
+      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#why-do-we-need-the-growth">Why do we need the growth?</a></li>
+    <li><a href="#what-are-the-bounds-of-growth-your-engineering-org-can-cope-with">What are the bounds of growth your engineering org can cope with?</a></li>
+  </ul>
+</nav>
+    </div>
+  </span>
+</div>
+
+
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+      <h1 class="posttitle" itemprop="name headline">
+        Devlivery cadence and capacity, a team&#39;s delivery does not grow linearly with size
+      </h1>
+      <div class="meta">
+        
+        <div class="postdate">
+          
+          <time datetime="2023-02-11 12:55:00 &#43;0000 UTC" itemprop="datePublished">2023-02-11</time>
+          
+        </div>
+        
+        
+        <div class="article-tag">
+            <i class="fas fa-tag"></i>
+            
+            
+            <a class="tag-link" href="/tags/em" rel="tag">em</a>
+            
+        </div>
+        
+      </div>
+    </header>
+
+  
+    <div class="content" itemprop="articleBody">
+      <p>A significant part of my job in the past has been to plan for the growth of an engineering organization. There are a number of things to consider when doing this:</p>
+<h2 id="why-do-we-need-the-growth">Why do we need the growth?</h2>
+<p>Really though, specifically what value do you intend to create with the growth? This first concern should be obvious, but being comprehensive pays dividends later.</p>
+<p><strong>Why are you growing?</strong></p>
+<p>What business value do you intend to deliver with that growth? If you work at a large enough company, either you or your manager will build a business case for it, even if it isn&rsquo;t formal.</p>
+<p>This is mainly because organisational growth is front loaded operational cost. You are making a bet: the cost is your increasing burn rate, the payoff is the business value you enable, and the plan (the answer to the why question) is the means by which you investigate the wager and then decide if indeed you do want to grow <em>now</em> and by how much.</p>
+<p>We&rsquo;ve seen the consequences of either poor or risky versions of this wager in the news recently, through layoffs - this is a whole topic onto itself thought.</p>
+<p><strong>So back to it:</strong> why are you growing? Get very comfortable with the answer to this question, wether you, your manager or general manager owns the decision. Ultimately <strong>you</strong> are the arbitror of delivery need into delivery capacity. You should clearly understand what you intend to be able to deliver <em>incremental</em> to what you currently can deliver.</p>
+<p>With that in mind&hellip;</p>
+<h2 id="what-are-the-bounds-of-growth-your-engineering-org-can-cope-with">What are the bounds of growth your engineering org can cope with?</h2>
+<p><strong>What is the fastest the organisation <em>could</em> grow and what is the slowest it could sustain</strong> - considering attrition and delivery expectations?</p>
+<p>You just landed that funding your startup was looking for, or your company decided your Org needs to significantly expand. A significant part of the funding is likley intended to grow your engineering team, great!</p>
+<p><strong>The first step:</strong> consider the speed at which you <em>can</em> grow. This will vary depending on the size of your team, but is a function of the number of people you can effectively onboard in parallel. You&rsquo;ll usually want to consider:</p>
+<ul>
+<li>The speed at which a high quality hiring pipeline can put bums in seats</li>
+<li>Impact on your existing engineers and the teams they work in (given the investment you currently have in onboarding) - your team will go slower, primarily for two reasons:
+<ul>
+<li>engineers need to interview, and quite often your best engineers provide your most trusted signal</li>
+<li>engineers will need to onboard new joiners, doing this is a valuable investment but like any investment, there is a cost associated</li>
+</ul>
+</li>
+<li>Bottlenecks in cross functional teams. What are your ideal engineer to Product Manager, Engineering Manager, Data Science or Designer ratios? (Other disciplines may be more important for your case). Do those hiring pipelines operate at the same speed? If not, plan a little ahead, talk to your Product and Data peers!</li>
+</ul>
+<p><strong>The last step:</strong> Roughly what are the expectations of the shape of delivery cadence over time?</p>
+<p>This last concern is one that is nuanced and important to communicate to stakeholders - especially non technical stakeholders.</p>
+<p>A performing product engineering organisation should be delivering new, hopefully innovative, product into the market. As new product initiatives becomes succesful, they naturally generate operational burden. Not just the maintenance and reliability of those products, but a consistent programme of optimization that hones the product offer and it&rsquo;s operation into a well oiled machine.</p>
+<p><strong>The consequences should be obvious: delivery capacity is a sublinear function to new people.</strong></p>
+<p>This is true at the smallest scale, a team of 3 tend to get more done per person than a team of 6; and at the largest scale, an org of tens of teams tends to deliver less per team then an org of 3 teams.</p>
+<p>This essentially looks like a function <em>that wants to be concave</em>, and a large part the engineering leadership role and indeed <em>your energy</em> is to fight against that concaving pressure.</p>
+<p>This should dissuade org planning that ramains stuck to the form <em>X new people (enigneers, data scientists, product managers) to build Y thing</em> in your roadmap. This form an easier sell to a leadership team, because of the ilusion of neatness.</p>
+<p><strong>Rather, I would encourage you plan for (and communicate about) delivery capacity.</strong> That is, plan for both increasing operational burden (from products that are succeeding in the market) <strong>and</strong> for the ability to build new product.</p>
+<p>This distinction isn&rsquo;t just useful for managing up - it&rsquo;s helpful in keeping <em>you</em> the planner of a team or an org, intellectually honest. It forces you to ask the question: am I willing to pay in inneficiency to have some more delivery capacity? Do I want the cost of more overhead for the potential of more people? This question should dissuade you from the <em>very bad habit of taking any headcount you can have</em>.</p>
+
+    </div>
+  </article>
+
+  
+  
+
+
+
+
+
+  <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/posts">Writings</a></li>
+         
+          <li><a href="/about">About</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#why-do-we-need-the-growth">Why do we need the growth?</a></li>
+    <li><a href="#what-are-the-bounds-of-growth-your-engineering-org-can-cope-with">What are the bounds of growth your engineering org can cope with?</a></li>
+  </ul>
+</nav>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fl0.ai%2fposts%2f2023-02-11-devlivery-cadence-and-capacity-a-teams-delivery-does-not-grow-linearly%2f">
+      <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fl0.ai%2fposts%2f2023-02-11-devlivery-cadence-and-capacity-a-teams-delivery-does-not-grow-linearly%2f&text=Devlivery%20cadence%20and%20capacity%2c%20a%20team%27s%20delivery%20does%20not%20grow%20linearly%20with%20size">
+      <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fl0.ai%2fposts%2f2023-02-11-devlivery-cadence-and-capacity-a-teams-delivery-does-not-grow-linearly%2f&title=Devlivery%20cadence%20and%20capacity%2c%20a%20team%27s%20delivery%20does%20not%20grow%20linearly%20with%20size">
+      <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fl0.ai%2fposts%2f2023-02-11-devlivery-cadence-and-capacity-a-teams-delivery-does-not-grow-linearly%2f&is_video=false&description=Devlivery%20cadence%20and%20capacity%2c%20a%20team%27s%20delivery%20does%20not%20grow%20linearly%20with%20size">
+      <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Devlivery%20cadence%20and%20capacity%2c%20a%20team%27s%20delivery%20does%20not%20grow%20linearly%20with%20size&body=Check out this article: https%3a%2f%2fl0.ai%2fposts%2f2023-02-11-devlivery-cadence-and-capacity-a-teams-delivery-does-not-grow-linearly%2f">
+      <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fl0.ai%2fposts%2f2023-02-11-devlivery-cadence-and-capacity-a-teams-delivery-does-not-grow-linearly%2f&title=Devlivery%20cadence%20and%20capacity%2c%20a%20team%27s%20delivery%20does%20not%20grow%20linearly%20with%20size">
+      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2023-02-11-devlivery-cadence-and-capacity-a-teams-delivery-does-not-grow-linearly%2f&title=Devlivery%20cadence%20and%20capacity%2c%20a%20team%27s%20delivery%20does%20not%20grow%20linearly%20with%20size">
+      <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.stumbleupon.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2023-02-11-devlivery-cadence-and-capacity-a-teams-delivery-does-not-grow-linearly%2f&title=Devlivery%20cadence%20and%20capacity%2c%20a%20team%27s%20delivery%20does%20not%20grow%20linearly%20with%20size">
+      <i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://digg.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2023-02-11-devlivery-cadence-and-capacity-a-teams-delivery-does-not-grow-linearly%2f&title=Devlivery%20cadence%20and%20capacity%2c%20a%20team%27s%20delivery%20does%20not%20grow%20linearly%20with%20size">
+      <i class="fab fa-digg fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fl0.ai%2fposts%2f2023-02-11-devlivery-cadence-and-capacity-a-teams-delivery-does-not-grow-linearly%2f&name=Devlivery%20cadence%20and%20capacity%2c%20a%20team%27s%20delivery%20does%20not%20grow%20linearly%20with%20size&description=A%20significant%20part%20of%20my%20job%20in%20the%20past%20has%20been%20to%20plan%20for%20the%20growth%20of%20an%20engineering%20organization.%20There%20are%20a%20number%20of%20things%20to%20consider%20when%20doing%20this%3a%0aWhy%20do%20we%20need%20the%20growth%3f%20Really%20though%2c%20specifically%20what%20value%20do%20you%20intend%20to%20create%20with%20the%20growth%3f%20This%20first%20concern%20should%20be%20obvious%2c%20but%20being%20comprehensive%20pays%20dividends%20later.%0aWhy%20are%20you%20growing%3f%0aWhat%20business%20value%20do%20you%20intend%20to%20deliver%20with%20that%20growth%3f">
+      <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fl0.ai%2fposts%2f2023-02-11-devlivery-cadence-and-capacity-a-teams-delivery-does-not-grow-linearly%2f&t=Devlivery%20cadence%20and%20capacity%2c%20a%20team%27s%20delivery%20does%20not%20grow%20linearly%20with%20size">
+      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;">
+          <i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;">
+          <i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;">
+          <i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');">
+          <i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+
+  <footer id="footer">
+  <div class="footer-left">
+    Copyright  &copy; 2023  l0.ai 
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+        <li><a href="/">Home</a></li>
+         
+        <li><a href="/posts">Writings</a></li>
+         
+        <li><a href="/about">About</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+
+  </div>
+</body>
+
+<link rel="stylesheet" href=/lib/font-awesome/css/all.min.css>
+<script src=/lib/jquery/jquery.min.js></script>
+<script src=/js/main.js></script>
+
+
+
+</html>
