@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>information_theory on l0.ai</title>
+    <link>https://l0.ai/tags/information_theory/</link>
+    <description>Recent content in information_theory on l0.ai</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 01 Jul 2023 10:00:00 +0000</lastBuildDate>
+    <atom:link href="https://l0.ai/tags/information_theory/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The duality of knowledge and control</title>
+      <link>https://l0.ai/posts/2023-07-01-knowledge-and-control/</link>
+      <pubDate>Sat, 01 Jul 2023 10:00:00 +0000</pubDate>
+      <guid>https://l0.ai/posts/2023-07-01-knowledge-and-control/</guid>
+      <description>In experimentation, you leverage control to gain knowledge, in engineering you leverage knowledge to gain control.
+I recently used this paraphrasing of a quote from Claude Shannon during a conversation with a team considering changes to experimentation tooling. This framing forces you to clarify what you mean to do - something generally useful.
+A more general take on this quote replaces engineering with delivery. That is, in delivery you should be leveraging what you know to effect a change in a system, for instance a new entry point in a product.</description>
+    </item>
+  </channel>
+</rss>

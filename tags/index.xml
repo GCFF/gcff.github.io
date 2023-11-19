@@ -6,145 +6,119 @@
     <description>Recent content in Tags on l0.ai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 06 Jun 2023 14:45:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://l0.ai/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 01 Jul 2023 10:00:00 +0000</lastBuildDate>
+    <atom:link href="https://l0.ai/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>em</title>
+      <link>https://l0.ai/tags/em/</link>
+      <pubDate>Sat, 01 Jul 2023 10:00:00 +0000</pubDate>
+      <guid>https://l0.ai/tags/em/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>information_theory</title>
+      <link>https://l0.ai/tags/information_theory/</link>
+      <pubDate>Sat, 01 Jul 2023 10:00:00 +0000</pubDate>
+      <guid>https://l0.ai/tags/information_theory/</guid>
+      <description></description>
+    </item>
     <item>
       <title>bench_strength</title>
       <link>https://l0.ai/tags/bench_strength/</link>
       <pubDate>Tue, 06 Jun 2023 14:45:00 +0000</pubDate>
-      
       <guid>https://l0.ai/tags/bench_strength/</guid>
       <description></description>
     </item>
-    
-    <item>
-      <title>em</title>
-      <link>https://l0.ai/tags/em/</link>
-      <pubDate>Tue, 06 Jun 2023 14:45:00 +0000</pubDate>
-      
-      <guid>https://l0.ai/tags/em/</guid>
-      <description></description>
-    </item>
-    
     <item>
       <title>metrics</title>
       <link>https://l0.ai/tags/metrics/</link>
       <pubDate>Fri, 03 Feb 2023 08:07:00 +0000</pubDate>
-      
       <guid>https://l0.ai/tags/metrics/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>comms</title>
       <link>https://l0.ai/tags/comms/</link>
       <pubDate>Thu, 12 Jan 2023 18:20:00 +0000</pubDate>
-      
       <guid>https://l0.ai/tags/comms/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>AI</title>
       <link>https://l0.ai/tags/ai/</link>
       <pubDate>Sat, 10 Dec 2022 18:30:00 +0000</pubDate>
-      
       <guid>https://l0.ai/tags/ai/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Machine Learning</title>
       <link>https://l0.ai/tags/machine-learning/</link>
       <pubDate>Sat, 10 Dec 2022 18:30:00 +0000</pubDate>
-      
       <guid>https://l0.ai/tags/machine-learning/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Neurips</title>
       <link>https://l0.ai/tags/neurips/</link>
       <pubDate>Sat, 10 Dec 2022 18:30:00 +0000</pubDate>
-      
       <guid>https://l0.ai/tags/neurips/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Research</title>
       <link>https://l0.ai/tags/research/</link>
       <pubDate>Sat, 10 Dec 2022 18:30:00 +0000</pubDate>
-      
       <guid>https://l0.ai/tags/research/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>infra</title>
       <link>https://l0.ai/tags/infra/</link>
       <pubDate>Wed, 09 Nov 2022 20:30:00 +0000</pubDate>
-      
       <guid>https://l0.ai/tags/infra/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Stable Diffusion</title>
       <link>https://l0.ai/tags/stable-diffusion/</link>
       <pubDate>Wed, 09 Nov 2022 20:30:00 +0000</pubDate>
-      
       <guid>https://l0.ai/tags/stable-diffusion/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>art</title>
       <link>https://l0.ai/tags/art/</link>
       <pubDate>Sun, 06 Nov 2022 09:25:06 +0000</pubDate>
-      
       <guid>https://l0.ai/tags/art/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>dreambooth</title>
       <link>https://l0.ai/tags/dreambooth/</link>
       <pubDate>Sun, 06 Nov 2022 09:25:06 +0000</pubDate>
-      
       <guid>https://l0.ai/tags/dreambooth/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>ARC</title>
       <link>https://l0.ai/tags/arc/</link>
       <pubDate>Tue, 19 Jan 2021 09:44:00 +0000</pubDate>
-      
       <guid>https://l0.ai/tags/arc/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>tech</title>
       <link>https://l0.ai/tags/tech/</link>
       <pubDate>Tue, 19 Jan 2021 09:44:00 +0000</pubDate>
-      
       <guid>https://l0.ai/tags/tech/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>video integrity</title>
       <link>https://l0.ai/tags/video-integrity/</link>
       <pubDate>Mon, 11 Jan 2021 16:53:00 +0000</pubDate>
-      
       <guid>https://l0.ai/tags/video-integrity/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

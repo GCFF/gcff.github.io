@@ -7,77 +7,60 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 10 Dec 2022 18:30:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://l0.ai/tags/ai/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="https://l0.ai/tags/ai/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Neurips Wrapup Post 1</title>
       <link>https://l0.ai/posts/2022-12-10-neurips-2022-1/</link>
       <pubDate>Sat, 10 Dec 2022 18:30:00 +0000</pubDate>
-      
       <guid>https://l0.ai/posts/2022-12-10-neurips-2022-1/</guid>
-      <description>Neurips 2022 - A wrap up post #1   Neurips 2022 has just finished - and it was a great conference! It was my first proper conference since Covid, and it was so much fun. I don&amp;rsquo;t go to Neurips to present, but rather to absorb. Over time, it has become part of my yearly calendar that I really look forward to. It&amp;rsquo;s a chance to reconnect with what is happening at the edge of deep learning.</description>
+      <description>Neurips 2022 - A wrap up post #1 Neurips 2022 has just finished - and it was a great conference! It was my first proper conference since Covid, and it was so much fun. I don&amp;rsquo;t go to Neurips to present, but rather to absorb. Over time, it has become part of my yearly calendar that I really look forward to. It&amp;rsquo;s a chance to reconnect with what is happening at the edge of deep learning.</description>
     </item>
-    
     <item>
       <title>Fast Stable Diffusion</title>
       <link>https://l0.ai/posts/2022-11-9-fast-diffusion/</link>
       <pubDate>Wed, 09 Nov 2022 20:30:00 +0000</pubDate>
-      
       <guid>https://l0.ai/posts/2022-11-9-fast-diffusion/</guid>
       <description>Fast Stable Diffusion I&amp;rsquo;ve been playing around with Stable Diffusion recently - from just playing with prompt, to trying out Textual Inversion and Dreambooth.
 I&amp;rsquo;ve opted not to use services or Web GUI&amp;rsquo;s - not because I dislike them, but rather because I was looking to learn about diffusion models and the infrastructure to use them, and get amazing pictures as a side effect. Stable diffusion has this great property : it can fit in a lot of consumer grade hardware.</description>
     </item>
-    
     <item>
       <title>Stable Diffusion Experiment 3</title>
       <link>https://l0.ai/posts/2022-11-6-stable-diffusion-3/</link>
       <pubDate>Sun, 06 Nov 2022 09:25:06 +0000</pubDate>
-      
       <guid>https://l0.ai/posts/2022-11-6-stable-diffusion-3/</guid>
-      <description>Imagining myself in new images Textual Inversion In an earlier post I referenced work on Textual Inversion that allows new concepts to be added to the Stable Diffusion model. Textual inversion trains a new set of embeddings that can be used to generate a new object or style you provide through pictures, by loading them into a model.       I used textual inversion to generate some portraits of our pup, though this worked well and generated some beautiful images it wasn&amp;rsquo;t exactly like our dog.</description>
+      <description>Imagining myself in new images Textual Inversion In an earlier post I referenced work on Textual Inversion that allows new concepts to be added to the Stable Diffusion model. Textual inversion trains a new set of embeddings that can be used to generate a new object or style you provide through pictures, by loading them into a model. I used textual inversion to generate some portraits of our pup, though this worked well and generated some beautiful images it wasn&amp;rsquo;t exactly like our dog.</description>
     </item>
-    
     <item>
       <title>Stable Diffusion Sketch 2-4</title>
       <link>https://l0.ai/posts/2022-09-17-stable-diffusion-sketch2/</link>
       <pubDate>Sat, 17 Sep 2022 16:25:06 +0000</pubDate>
-      
       <guid>https://l0.ai/posts/2022-09-17-stable-diffusion-sketch2/</guid>
-      <description>Sketch 2 Sketch 3 Sketch 4   As I continue to explore Stable Diffusion, I&amp;rsquo;m more and more impressed by a few things: some grasp of compositionality, wide breadth of concepts or semantics in the model and very impressive quality in its generations. The images below weren&amp;rsquo;t hand picked, I&amp;rsquo;ve put other generations here too.
+      <description>Sketch 2 Sketch 3 Sketch 4 As I continue to explore Stable Diffusion, I&amp;rsquo;m more and more impressed by a few things: some grasp of compositionality, wide breadth of concepts or semantics in the model and very impressive quality in its generations. The images below weren&amp;rsquo;t hand picked, I&amp;rsquo;ve put other generations here too.
 Sketch 2 Prompt: : &amp;ldquo;Low poly art of a floating island sourrounded by waterfalls with a japanese temple built with red wood, isometric art, 3d render, ray tracing, high detail, artstation, concept art, behance, smooth, sharp focus, ethereal lighting, unreal engine 5&amp;rdquo;</description>
     </item>
-    
     <item>
       <title>Stable Diffusion Sketch 1</title>
       <link>https://l0.ai/posts/2022-09-11-stable-diffusion-sketch1/</link>
       <pubDate>Sun, 11 Sep 2022 16:25:06 +0000</pubDate>
-      
       <guid>https://l0.ai/posts/2022-09-11-stable-diffusion-sketch1/</guid>
       <description>Sketch 1 Prompt: &amp;ldquo;Pixar Style, puppy schnauzer adventurer, blue eye, tiny cute adorable, villain, unreal engine, dramatic lighting, 8k, portrait, 50mm&amp;rdquo;
-  generated image of Miniture Shcnauzer cartoon   Stable Diffusion is pretty incredible. It&amp;rsquo;s a multi-modal generative model, most easily used through hugging face, that you do not need to pay for, unlike DALLE-2 or Midjourney.
+generated image of Miniture Shcnauzer cartoon Stable Diffusion is pretty incredible. It&amp;rsquo;s a multi-modal generative model, most easily used through hugging face, that you do not need to pay for, unlike DALLE-2 or Midjourney.
 It is fascinating, and really highlights a question that now feels a little old and yet somehow super relevant: will there be a labour market for prompt engineers?</description>
     </item>
-    
     <item>
       <title>A neuro-symbolic ARC parser</title>
       <link>https://l0.ai/posts/2021-01-19-a-neuro-symbolic-arc-parser/</link>
       <pubDate>Tue, 19 Jan 2021 09:44:00 +0000</pubDate>
-      
       <guid>https://l0.ai/posts/2021-01-19-a-neuro-symbolic-arc-parser/</guid>
-      <description>Intro This previous post introduces why I think the abstraction and reasoning corpus (ARC) from this paper is a worthy challenge to pursue for robust ML research. As a quick explainer, the ARC dataset is composed of tasks like this one:   An ARC Task. The top row are the starting prompts, the bottom row are the correct answers.   In this task you can produce the correct answer by: finding objects with the same shape as the object contained by the top left grey border and recoloring those objects to grey.</description>
+      <description>Intro This previous post introduces why I think the abstraction and reasoning corpus (ARC) from this paper is a worthy challenge to pursue for robust ML research. As a quick explainer, the ARC dataset is composed of tasks like this one: An ARC Task. The top row are the starting prompts, the bottom row are the correct answers. In this task you can produce the correct answer by: finding objects with the same shape as the object contained by the top left grey border and recoloring those objects to grey.</description>
     </item>
-    
     <item>
       <title>Why ARC?</title>
       <link>https://l0.ai/posts/2020-12-22-arc-intro/</link>
       <pubDate>Mon, 28 Dec 2020 15:45:06 +0000</pubDate>
-      
       <guid>https://l0.ai/posts/2020-12-22-arc-intro/</guid>
       <description>Intro In November 2019, François Chollet released a paper called &amp;ldquo;On the measure of Intelligence&amp;rdquo;. I highly recommend you read this paper if you have interest in AGI. You can very roughly split the work into two, lopsided pieces: the paper and the abstraction and reasoning corpus (ARC) dataset.
 There are plenty of great discussions of the paper, among them this post and a series of videos, which I suggest you read.</description>
     </item>
-    
   </channel>
 </rss>

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> The duality of knowledge and control | l0.ai</title>
+  <meta name="description" content="l0.ai is where I {guillermo christen} write about technology: machine learning, data and labeling, management and communication.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta property="og:title" content="The duality of knowledge and control" />
+<meta property="og:description" content="In experimentation, you leverage control to gain knowledge, in engineering you leverage knowledge to gain control.
+I recently used this paraphrasing of a quote from Claude Shannon during a conversation with a team considering changes to experimentation tooling. This framing forces you to clarify what you mean to do - something generally useful.
+A more general take on this quote replaces engineering with delivery. That is, in delivery you should be leveraging what you know to effect a change in a system, for instance a new entry point in a product." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://l0.ai/posts/2023-07-01-knowledge-and-control/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-07-01T10:00:00+00:00" />
+<meta property="article:modified_time" content="2023-07-01T10:00:00+00:00" />
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="The duality of knowledge and control"/>
+<meta name="twitter:description" content="In experimentation, you leverage control to gain knowledge, in engineering you leverage knowledge to gain control.
+I recently used this paraphrasing of a quote from Claude Shannon during a conversation with a team considering changes to experimentation tooling. This framing forces you to clarify what you mean to do - something generally useful.
+A more general take on this quote replaces engineering with delivery. That is, in delivery you should be leveraging what you know to effect a change in a system, for instance a new entry point in a product."/>
+
+  
+  
+  
+  <link rel="stylesheet" href="https://l0.ai/css/style-white.css">
+  
+   <link rel="stylesheet" href="https://l0.ai/css/main.css"> 
+  
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+<link rel="icon" type="image/png" href="https://l0.ai/images/favicon.ico" />
+
+  
+    
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J7MP7KW334"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-J7MP7KW334');
+  </script>  
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+  <div class="content index py4">
+
+  <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+        <li><a href="/">Home</a></li>
+         
+        <li><a href="/posts">Writings</a></li>
+         
+        <li><a href="/about">About</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li>
+          <a class="icon" href=" https://l0.ai/posts/2023-06-06-hipo/">
+            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');">
+            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#">
+            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
+          </a>
+        </li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fl0.ai%2fposts%2f2023-07-01-knowledge-and-control%2f">
+      <i class="fab fa-facebook " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fl0.ai%2fposts%2f2023-07-01-knowledge-and-control%2f&text=The%20duality%20of%20knowledge%20and%20control">
+      <i class="fab fa-twitter " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fl0.ai%2fposts%2f2023-07-01-knowledge-and-control%2f&title=The%20duality%20of%20knowledge%20and%20control">
+      <i class="fab fa-linkedin " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fl0.ai%2fposts%2f2023-07-01-knowledge-and-control%2f&is_video=false&description=The%20duality%20of%20knowledge%20and%20control">
+      <i class="fab fa-pinterest " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=The%20duality%20of%20knowledge%20and%20control&body=Check out this article: https%3a%2f%2fl0.ai%2fposts%2f2023-07-01-knowledge-and-control%2f">
+      <i class="fas fa-envelope " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fl0.ai%2fposts%2f2023-07-01-knowledge-and-control%2f&title=The%20duality%20of%20knowledge%20and%20control">
+      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2023-07-01-knowledge-and-control%2f&title=The%20duality%20of%20knowledge%20and%20control">
+      <i class="fab fa-reddit " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.stumbleupon.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2023-07-01-knowledge-and-control%2f&title=The%20duality%20of%20knowledge%20and%20control">
+      <i class="fab fa-stumbleupon " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://digg.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2023-07-01-knowledge-and-control%2f&title=The%20duality%20of%20knowledge%20and%20control">
+      <i class="fab fa-digg " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fl0.ai%2fposts%2f2023-07-01-knowledge-and-control%2f&name=The%20duality%20of%20knowledge%20and%20control&description=In%20experimentation%2c%20you%20leverage%20control%20to%20gain%20knowledge%2c%20in%20engineering%20you%20leverage%20knowledge%20to%20gain%20control.%0aI%20recently%20used%20this%20paraphrasing%20of%20a%20quote%20from%20Claude%20Shannon%20during%20a%20conversation%20with%20a%20team%20considering%20changes%20to%20experimentation%20tooling.%20This%20framing%20forces%20you%20to%20clarify%20what%20you%20mean%20to%20do%20-%20something%20generally%20useful.%0aA%20more%20general%20take%20on%20this%20quote%20replaces%20engineering%20with%20delivery.%20That%20is%2c%20in%20delivery%20you%20should%20be%20leveraging%20what%20you%20know%20to%20effect%20a%20change%20in%20a%20system%2c%20for%20instance%20a%20new%20entry%20point%20in%20a%20product.">
+      <i class="fab fa-tumblr " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fl0.ai%2fposts%2f2023-07-01-knowledge-and-control%2f&t=The%20duality%20of%20knowledge%20and%20control">
+      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#so-when-experimenting">So, when experimenting:</a></li>
+        <li><a href="#when-you-build-something-for-production">When you build something for production:</a></li>
+        <li><a href="#key-takeaways">Key Takeaways:</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+  </span>
+</div>
+
+
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+      <h1 class="posttitle" itemprop="name headline">
+        The duality of knowledge and control
+      </h1>
+      <div class="meta">
+        
+        <div class="postdate">
+          
+          <time datetime="2023-07-01 10:00:00 &#43;0000 UTC" itemprop="datePublished">2023-07-01</time>
+          
+        </div>
+        
+        
+        <div class="article-tag">
+            <i class="fas fa-tag"></i>
+            
+            
+            <a class="tag-link" href="/tags/em" rel="tag">em</a>
+            
+             ,  
+            <a class="tag-link" href="/tags/information_theory" rel="tag">information_theory</a>
+            
+        </div>
+        
+      </div>
+    </header>
+
+  
+    <div class="content" itemprop="articleBody">
+      <blockquote>
+<p>In experimentation, you leverage control to gain knowledge, in engineering you leverage knowledge to gain control.</p>
+</blockquote>
+<figure><img src="../control_knowledge.png"/>
+</figure>
+
+<p>I recently used this paraphrasing of a quote from Claude Shannon during a conversation with a team considering changes to experimentation tooling. This framing forces you to clarify what you <em>mean to do</em> - something generally useful.</p>
+<p>A more general take on this quote replaces <strong>engineering</strong> with <strong>delivery</strong>. That is, in delivery you should be leveraging <em>what you know</em> to effect a change in a system, for instance a new entry point in a product.</p>
+<p>In most contexts it&rsquo;s useful to be explicit in determining which mode you are operating in: <strong>delivery</strong> or <strong>experimentation</strong>.  I&rsquo;ve seen this done incredibly well (when I worked in a very large social network for instance) and also very poorly (unfortunately this is much more common).</p>
+<p>In experimentation mode, you craft an intervention which is subject to your control. A change in a user flow, a new ranking model or the color of a button.  You <em>should</em> only change what you <strong>can</strong> deterministically control. Indeed you can&rsquo;t really directly account for those things out of you control and thus, quite often you&rsquo;ll do some form of random sampling. In this setting, <strong>you have leveraged what you <em>can</em> control</strong>, the change in the user flow, <strong>to learn something new</strong>; in this case something about how those users flow through your product.</p>
+<p><strong>In engineering</strong> (or <em>delivery</em>) mode, <strong>you&rsquo;ll use what you know</strong> (sometimes learned through experimentation) <strong>to maximise for an outcome</strong> you are looking for: less friction in a user flow, less risk in an interaction that has compliance implications, etc.</p>
+<h3 id="so-when-experimenting">So, when experimenting:</h3>
+<p><strong>Ideally, your experiment should expresses a specific hypothesis, that if true, you can immediately exploit</strong> (by deploying the intervention). This is not easy or cheap, the fidelity and polish of your intervention needs to be quite high - because if succesful you will literally deploy it.</p>
+<p>This is ideal because of two reasons:</p>
+<ul>
+<li><strong>You get to value quicker</strong> - the time from positive results to maximising potential value from the intervention is smaller</li>
+<li><strong>What you learned in your experiment most closely matches reality</strong> - your results wont be partially invalidated because of changes in your intervention (when you polish it for instance) or through time (especially relevant in adversarial environments where actors learn to circumvent your interventions)</li>
+</ul>
+<p>However, you might have a broader &rsquo;experiment&rsquo; on your hands, such as questioning if this product will work. In such cases, you are likely trying to reduce risk by investing less initially, perhaps rolling out a minimal version to test for fit. This approach can be seen as deploying a &lsquo;minimum viable product&rsquo; (MVP). The MVP strategy is about learning from the market response to a bare-bones version of your product, rather than about experimenting in a controlled environment.</p>
+<p>This distinction is crucial to understand. Experimentation should be designed to test specific hypotheses under controlled conditions, where variables can be managed and outcomes can be directly attributed to the changes made. This process informs your engineering or delivery strategy by providing concrete data and insights.</p>
+<p>If you are building an MVP, don&rsquo;t make the mistake of confusing a reduction in your scope (to explore fit), with unstable, buggy or broken experiences. You&rsquo;ll be unable to determine if poor customer engagement or reaction is from the value your product offers, or from a poorly built experience. This is especially true now, in 2023.</p>
+<h3 id="when-you-build-something-for-production">When you build something for production:</h3>
+<p>Your focus shifts to reliability, scalability, and meeting the defined requirements. It&rsquo;s about applying the knowledge gained from experiments (and other sources) to create a robust, functional product or feature.</p>
+<p>It&rsquo;s easy, and can be quite costly, <strong>to pretend you are in one mode (experimentation) when you are in the other (delivery).</strong> It&rsquo;s also easy to avoid this mistake.</p>
+<h3 id="key-takeaways">Key Takeaways:</h3>
+<ul>
+<li><strong>Clear Objective</strong>: Understand whether you&rsquo;re experimenting to gather data or delivering a finished product, even if it&rsquo;s a bare bones one</li>
+<li><strong>Resource Allocation</strong>: Allocate time, energy and resources appropriately based on the mode you&rsquo;re operating in</li>
+<li><strong>Outcome Expectation</strong>: Clearly articulate (first to yourself) expectations about the results based on whether you&rsquo;re in an experimental or delivery phase</li>
+<li><strong>Learning from Experiments</strong>: Use the insights gained from experiments to inform and enhance your delivery efforts, <em>don&rsquo;t forget the negative results, log them for posterity</em></li>
+</ul>
+<p>Recognizing and respecting the differences between these two modes is a hallmark of effective engineering management and a key to successful product development. Remember: The goal is not just to build or test, but to do so with a purpose and a clear understanding of the desired outcome.</p>
+
+    </div>
+  </article>
+
+  
+  
+
+
+
+
+
+  <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/posts">Writings</a></li>
+         
+          <li><a href="/about">About</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#so-when-experimenting">So, when experimenting:</a></li>
+        <li><a href="#when-you-build-something-for-production">When you build something for production:</a></li>
+        <li><a href="#key-takeaways">Key Takeaways:</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fl0.ai%2fposts%2f2023-07-01-knowledge-and-control%2f">
+      <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fl0.ai%2fposts%2f2023-07-01-knowledge-and-control%2f&text=The%20duality%20of%20knowledge%20and%20control">
+      <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fl0.ai%2fposts%2f2023-07-01-knowledge-and-control%2f&title=The%20duality%20of%20knowledge%20and%20control">
+      <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fl0.ai%2fposts%2f2023-07-01-knowledge-and-control%2f&is_video=false&description=The%20duality%20of%20knowledge%20and%20control">
+      <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=The%20duality%20of%20knowledge%20and%20control&body=Check out this article: https%3a%2f%2fl0.ai%2fposts%2f2023-07-01-knowledge-and-control%2f">
+      <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fl0.ai%2fposts%2f2023-07-01-knowledge-and-control%2f&title=The%20duality%20of%20knowledge%20and%20control">
+      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2023-07-01-knowledge-and-control%2f&title=The%20duality%20of%20knowledge%20and%20control">
+      <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.stumbleupon.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2023-07-01-knowledge-and-control%2f&title=The%20duality%20of%20knowledge%20and%20control">
+      <i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://digg.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2023-07-01-knowledge-and-control%2f&title=The%20duality%20of%20knowledge%20and%20control">
+      <i class="fab fa-digg fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fl0.ai%2fposts%2f2023-07-01-knowledge-and-control%2f&name=The%20duality%20of%20knowledge%20and%20control&description=In%20experimentation%2c%20you%20leverage%20control%20to%20gain%20knowledge%2c%20in%20engineering%20you%20leverage%20knowledge%20to%20gain%20control.%0aI%20recently%20used%20this%20paraphrasing%20of%20a%20quote%20from%20Claude%20Shannon%20during%20a%20conversation%20with%20a%20team%20considering%20changes%20to%20experimentation%20tooling.%20This%20framing%20forces%20you%20to%20clarify%20what%20you%20mean%20to%20do%20-%20something%20generally%20useful.%0aA%20more%20general%20take%20on%20this%20quote%20replaces%20engineering%20with%20delivery.%20That%20is%2c%20in%20delivery%20you%20should%20be%20leveraging%20what%20you%20know%20to%20effect%20a%20change%20in%20a%20system%2c%20for%20instance%20a%20new%20entry%20point%20in%20a%20product.">
+      <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fl0.ai%2fposts%2f2023-07-01-knowledge-and-control%2f&t=The%20duality%20of%20knowledge%20and%20control">
+      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;">
+          <i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;">
+          <i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;">
+          <i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');">
+          <i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+
+  <footer id="footer">
+  <div class="footer-left">
+    Copyright  &copy; 2023  l0.ai 
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+        <li><a href="/">Home</a></li>
+         
+        <li><a href="/posts">Writings</a></li>
+         
+        <li><a href="/about">About</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+
+  </div>
+</body>
+
+<link rel="stylesheet" href=/lib/font-awesome/css/all.min.css>
+<script src=/lib/jquery/jquery.min.js></script>
+<script src=/js/main.js></script>
+
+
+
+</html>

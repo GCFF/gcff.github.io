@@ -6,82 +6,74 @@
     <description>Recent content in em on l0.ai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 06 Jun 2023 14:45:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://l0.ai/tags/em/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 01 Jul 2023 10:00:00 +0000</lastBuildDate>
+    <atom:link href="https://l0.ai/tags/em/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The duality of knowledge and control</title>
+      <link>https://l0.ai/posts/2023-07-01-knowledge-and-control/</link>
+      <pubDate>Sat, 01 Jul 2023 10:00:00 +0000</pubDate>
+      <guid>https://l0.ai/posts/2023-07-01-knowledge-and-control/</guid>
+      <description>In experimentation, you leverage control to gain knowledge, in engineering you leverage knowledge to gain control.
+I recently used this paraphrasing of a quote from Claude Shannon during a conversation with a team considering changes to experimentation tooling. This framing forces you to clarify what you mean to do - something generally useful.
+A more general take on this quote replaces engineering with delivery. That is, in delivery you should be leveraging what you know to effect a change in a system, for instance a new entry point in a product.</description>
+    </item>
     <item>
       <title>Selecting high potential individuals and the moral quandry N. 2</title>
       <link>https://l0.ai/posts/2023-06-06-hipo/</link>
       <pubDate>Tue, 06 Jun 2023 14:45:00 +0000</pubDate>
-      
       <guid>https://l0.ai/posts/2023-06-06-hipo/</guid>
       <description>In a previous post post I shared some reflections about how to apportion time given a set of reports - and highlighted I use my view of the potential (especially appetite) and efficacy of that time given the report, to answer the question: who should I give more time to?
 That post aimed to address how to think through time allocation, but didn&amp;rsquo;t speak to high potential individuals and the work of finding and nurturing them.</description>
     </item>
-    
     <item>
       <title>Devlivery cadence and capacity, a team&#39;s delivery does not grow linearly with size</title>
       <link>https://l0.ai/posts/2023-02-11-devlivery-cadence-and-capacity-a-teams-delivery-does-not-grow-linearly/</link>
       <pubDate>Sat, 11 Feb 2023 12:55:00 +0000</pubDate>
-      
       <guid>https://l0.ai/posts/2023-02-11-devlivery-cadence-and-capacity-a-teams-delivery-does-not-grow-linearly/</guid>
       <description>A significant part of my job in the past has been to plan for the growth of an engineering organization. There are a number of things to consider when doing this:
 Why do you need the growth? Really though, specifically what value do you intend to create with the growth? This first concern should be clear, but being comprehensive pays dividends later.
 Why are you growing?
 What business value do you intend to deliver with that growth?</description>
     </item>
-    
     <item>
       <title>Selecting high potential individuals and the moral quandry N. 1</title>
       <link>https://l0.ai/posts/2023-02-04-with-limited-time-who-do-you-support/</link>
       <pubDate>Sat, 04 Feb 2023 10:17:00 +0000</pubDate>
-      
       <guid>https://l0.ai/posts/2023-02-04-with-limited-time-who-do-you-support/</guid>
       <description>Through out your career as an engineering manager you&amp;rsquo;ll be faced with the challenge of supporting individuals with different development potential. With finite time this will force a difficult question: where to focus your efforts?. Like most difficult questions, this one has a moral quality to it.
 A potentially naive answer is to put an equal amount of time into developing each person: it feels like the fair thing to do.</description>
     </item>
-    
     <item>
       <title>Devlivery Metrics</title>
       <link>https://l0.ai/posts/2023-02-03-delivery-metrics/</link>
       <pubDate>Fri, 03 Feb 2023 08:07:00 +0000</pubDate>
-      
       <guid>https://l0.ai/posts/2023-02-03-delivery-metrics/</guid>
       <description>Delivery Metrics Delivery metrics are critical to understanding your teams&amp;rsquo; performance - but, this truth stems from something much deeper and important: value. Delivery metrics are a model teams use to undertstand the delivery of value, often before that value materialises into a terminal outcome (quite often financial).
 The common stats aphorism &amp;ldquo;All models are wrong, but some are useful&amp;rdquo; holds true for delivery metrics too - so more than just finding the right metric, as an engineering manager, you are looking to create an environment where squads seek to continuosly improve their understanding of value delivery.</description>
     </item>
-    
     <item>
       <title>Portfolio of Work</title>
       <link>https://l0.ai/posts/2023-01-12-portfolio-of-work/</link>
       <pubDate>Thu, 12 Jan 2023 18:20:00 +0000</pubDate>
-      
       <guid>https://l0.ai/posts/2023-01-12-portfolio-of-work/</guid>
       <description>Portfolio of work Many spinning plates is something I have often heard in the context of work (including mine) - I&amp;rsquo;ve used it! I find this is a poor analogy, and if indeed it is apt as an analogy, then there is an issue: fragility. I picture a brittle juggling act to keep all those plates spinning, rushing from one to the next, always under stress.
 I rather think of managing a portfolio of work, where the return profile of that work varies, most usefully, along two key axes: timeline to impact and likelihood of impact.</description>
     </item>
-    
     <item>
       <title>The Pyramid Principle</title>
       <link>https://l0.ai/posts/2022-11-04-the-pyramid-principle/</link>
       <pubDate>Fri, 04 Nov 2022 09:00:00 +0000</pubDate>
-      
       <guid>https://l0.ai/posts/2022-11-04-the-pyramid-principle/</guid>
       <description>I left the meeting and I felt terrible - I knew I could do better
 I had just walked out of the room from a meeting with the folks that ran community integrity at Facebook. I had really boched an answer that was likely to make my life harder later. As I left the room, a very senior engineer, who is a legend at the company, took me to one side and said quite plainly: just answer the question.</description>
     </item>
-    
     <item>
       <title>The rhetorical triangle</title>
       <link>https://l0.ai/posts/2022-10-29-rhetorical-triangle/</link>
       <pubDate>Sat, 29 Oct 2022 09:00:00 +0000</pubDate>
-      
       <guid>https://l0.ai/posts/2022-10-29-rhetorical-triangle/</guid>
       <description>The rhetorical triangle Last Friday, I found myself using the framing of the rhetorical triangle again, in the context of an engineering management discussion. I thought I should put pen to paper given how much I use it.
 The rhetorical triangle is composed of three corners: ethos, pathos, logos. It is used in rhetrocial analysis and as a means of taking a rhetorical stance - one that is suitable for the audience and the context - in both oratory and writing.</description>
     </item>
-    
   </channel>
 </rss>

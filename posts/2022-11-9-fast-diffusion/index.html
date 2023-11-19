@@ -12,9 +12,10 @@
 <meta property="og:description" content="Fast Stable Diffusion I&rsquo;ve been playing around with Stable Diffusion recently - from just playing with prompt, to trying out Textual Inversion and Dreambooth.
 I&rsquo;ve opted not to use services or Web GUI&rsquo;s - not because I dislike them, but rather because I was looking to learn about diffusion models and the infrastructure to use them, and get amazing pictures as a side effect. Stable diffusion has this great property : it can fit in a lot of consumer grade hardware." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://l0.ai/posts/2022-11-9-fast-diffusion/" />
+<meta property="og:url" content="https://l0.ai/posts/2022-11-9-fast-diffusion/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-11-09T20:30:00+00:00" />
 <meta property="article:modified_time" content="2022-11-09T20:30:00+00:00" />
+
 
   <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Fast Stable Diffusion"/>
@@ -235,7 +236,7 @@ I&rsquo;ve opted not to use services or Web GUI&rsquo;s - not because I dislike 
 <p>add Keys from NVIDIA, they rotated their keys in April so this was a bit fiddly:</p>
 </li>
 <li>
-<pre><code>sudo apt-key adv --fetch-keys 	https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/3bf863cc.pub       
+<pre tabindex="0"><code>sudo apt-key adv --fetch-keys 	https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/3bf863cc.pub       
 sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1804/x86_64/7fa2af80.pub
 </code></pre></li>
 <li>
@@ -245,8 +246,8 @@ sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/mach
 <p>after installation, set your path and LD_LIBRARY_PATH</p>
 </li>
 <li>
-<pre><code>export PATH=&quot;/usr/local/cuda-11.8/bin:$PATH&quot;
-export LD_LIBRARY_PATH=&quot;/usr/local/cuda-11.8/lib64:$LD_LIBRARY_PATH&quot;
+<pre tabindex="0"><code>export PATH=&#34;/usr/local/cuda-11.8/bin:$PATH&#34;
+export LD_LIBRARY_PATH=&#34;/usr/local/cuda-11.8/lib64:$LD_LIBRARY_PATH&#34;
 </code></pre></li>
 <li>
 <p>I ran into an issue - missing Python.h. Solution can be found <a href="https://bobbyhadz.com/blog/python-fatal-error-python-h-no-such-file-or-directory">here</a></p>
@@ -258,7 +259,7 @@ export LD_LIBRARY_PATH=&quot;/usr/local/cuda-11.8/lib64:$LD_LIBRARY_PATH&quot;
 <ol start="2">
 <li>
 <p><strong>Clone the flash attention <a href="https://github.com/HazyResearch/flash-attention">repo</a></strong> and build it</p>
-<pre><code>git clone https://github.com/HazyResearch/flash-attention.git
+<pre tabindex="0"><code>git clone https://github.com/HazyResearch/flash-attention.git
 cd flash-attention
 git submodule init
 git submodule update
@@ -267,7 +268,7 @@ cd ..
 </code></pre></li>
 <li>
 <p><strong>Clone the HazyResearch <a href="https://github.com/HazyResearch/diffusers">repo</a> of diffusers</strong> and build it</p>
-<pre><code>git clone https://github.com/HazyResearch/diffusers.git
+<pre tabindex="0"><code>git clone https://github.com/HazyResearch/diffusers.git
 cd diffusers
 pip install --prefix=~/.local -e .
 </code></pre></li>

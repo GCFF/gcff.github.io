@@ -7,39 +7,30 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 06 Nov 2022 09:25:06 +0000</lastBuildDate>
-    
-	<atom:link href="https://l0.ai/tags/art/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="https://l0.ai/tags/art/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Stable Diffusion Experiment 3</title>
       <link>https://l0.ai/posts/2022-11-6-stable-diffusion-3/</link>
       <pubDate>Sun, 06 Nov 2022 09:25:06 +0000</pubDate>
-      
       <guid>https://l0.ai/posts/2022-11-6-stable-diffusion-3/</guid>
-      <description>Imagining myself in new images Textual Inversion In an earlier post I referenced work on Textual Inversion that allows new concepts to be added to the Stable Diffusion model. Textual inversion trains a new set of embeddings that can be used to generate a new object or style you provide through pictures, by loading them into a model.       I used textual inversion to generate some portraits of our pup, though this worked well and generated some beautiful images it wasn&amp;rsquo;t exactly like our dog.</description>
+      <description>Imagining myself in new images Textual Inversion In an earlier post I referenced work on Textual Inversion that allows new concepts to be added to the Stable Diffusion model. Textual inversion trains a new set of embeddings that can be used to generate a new object or style you provide through pictures, by loading them into a model. I used textual inversion to generate some portraits of our pup, though this worked well and generated some beautiful images it wasn&amp;rsquo;t exactly like our dog.</description>
     </item>
-    
     <item>
       <title>Stable Diffusion Sketch 2-4</title>
       <link>https://l0.ai/posts/2022-09-17-stable-diffusion-sketch2/</link>
       <pubDate>Sat, 17 Sep 2022 16:25:06 +0000</pubDate>
-      
       <guid>https://l0.ai/posts/2022-09-17-stable-diffusion-sketch2/</guid>
-      <description>Sketch 2 Sketch 3 Sketch 4   As I continue to explore Stable Diffusion, I&amp;rsquo;m more and more impressed by a few things: some grasp of compositionality, wide breadth of concepts or semantics in the model and very impressive quality in its generations. The images below weren&amp;rsquo;t hand picked, I&amp;rsquo;ve put other generations here too.
+      <description>Sketch 2 Sketch 3 Sketch 4 As I continue to explore Stable Diffusion, I&amp;rsquo;m more and more impressed by a few things: some grasp of compositionality, wide breadth of concepts or semantics in the model and very impressive quality in its generations. The images below weren&amp;rsquo;t hand picked, I&amp;rsquo;ve put other generations here too.
 Sketch 2 Prompt: : &amp;ldquo;Low poly art of a floating island sourrounded by waterfalls with a japanese temple built with red wood, isometric art, 3d render, ray tracing, high detail, artstation, concept art, behance, smooth, sharp focus, ethereal lighting, unreal engine 5&amp;rdquo;</description>
     </item>
-    
     <item>
       <title>Stable Diffusion Sketch 1</title>
       <link>https://l0.ai/posts/2022-09-11-stable-diffusion-sketch1/</link>
       <pubDate>Sun, 11 Sep 2022 16:25:06 +0000</pubDate>
-      
       <guid>https://l0.ai/posts/2022-09-11-stable-diffusion-sketch1/</guid>
       <description>Sketch 1 Prompt: &amp;ldquo;Pixar Style, puppy schnauzer adventurer, blue eye, tiny cute adorable, villain, unreal engine, dramatic lighting, 8k, portrait, 50mm&amp;rdquo;
-  generated image of Miniture Shcnauzer cartoon   Stable Diffusion is pretty incredible. It&amp;rsquo;s a multi-modal generative model, most easily used through hugging face, that you do not need to pay for, unlike DALLE-2 or Midjourney.
+generated image of Miniture Shcnauzer cartoon Stable Diffusion is pretty incredible. It&amp;rsquo;s a multi-modal generative model, most easily used through hugging face, that you do not need to pay for, unlike DALLE-2 or Midjourney.
 It is fascinating, and really highlights a question that now feels a little old and yet somehow super relevant: will there be a labour market for prompt engineers?</description>
     </item>
-    
   </channel>
 </rss>

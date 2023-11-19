@@ -7,19 +7,14 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 09 Nov 2022 20:30:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://l0.ai/tags/infra/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="https://l0.ai/tags/infra/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Fast Stable Diffusion</title>
       <link>https://l0.ai/posts/2022-11-9-fast-diffusion/</link>
       <pubDate>Wed, 09 Nov 2022 20:30:00 +0000</pubDate>
-      
       <guid>https://l0.ai/posts/2022-11-9-fast-diffusion/</guid>
       <description>Fast Stable Diffusion I&amp;rsquo;ve been playing around with Stable Diffusion recently - from just playing with prompt, to trying out Textual Inversion and Dreambooth.
 I&amp;rsquo;ve opted not to use services or Web GUI&amp;rsquo;s - not because I dislike them, but rather because I was looking to learn about diffusion models and the infrastructure to use them, and get amazing pictures as a side effect. Stable diffusion has this great property : it can fit in a lot of consumer grade hardware.</description>
     </item>
-    
   </channel>
 </rss>

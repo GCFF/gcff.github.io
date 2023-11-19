@@ -11,9 +11,10 @@
   <meta property="og:title" content="This is not the full video" />
 <meta property="og:description" content="Signing video to certify you&#39;ve watched all of it" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://l0.ai/posts/2021-01-11-this-is-not-the-whole-video/" />
+<meta property="og:url" content="https://l0.ai/posts/2021-01-11-this-is-not-the-whole-video/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-01-11T16:53:00+00:00" />
 <meta property="article:modified_time" content="2021-01-11T16:53:00+00:00" />
+
 
   <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="This is not the full video"/>
@@ -230,19 +231,17 @@
 <ul>
 <li>
 <p>In sequential order, sign every frame, where the signature is the current frame’s hash and the previous frame’s signature. A similar approach is proposed in <a href="https://core.ac.uk/download/pdf/82623601.pdf">this</a> ,paper to sign video streams.
-<figure>
-    <img src="../streaming_record.png"/> <figcaption>
+<figure><img src="../streaming_record.png"/><figcaption>
             <h4>Each frame in a video is hashed, and a signature is created from the previous signature and the current frame. Signature B ($B), is created by hashing the current frame and signing the previous signature and the current frame </h4>
         </figcaption>
 </figure>
 </p>
 <ul>
 <li>In practice (and when <strong>not</strong> streaming) both steps can happen once recording stops
-<figure>
-    <img src="../post_record.png"/> <figcaption>
-            <h4>In practice (not streaming), a Merkle tree can do the heavy lifting. Even in the streaming context, a window &#43; buffer can be used. </h4>
-        </figcaption>
-</figure>
+<figure><img src="../post_record.png"/><figcaption>
+                <h4>In practice (not streaming), a Merkle tree can do the heavy lifting. Even in the streaming context, a window &#43; buffer can be used. </h4>
+            </figcaption>
+    </figure>
 </li>
 </ul>
 </li>
