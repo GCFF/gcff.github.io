@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> Common challenges as a new EM | l0.ai</title>
+  <meta name="description" content="l0.ai is where I {guillermo christen} write about technology: machine learning, data and labeling, management and communication.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta property="og:title" content="Common challenges as a new EM" />
+<meta property="og:description" content="It was about 8pm, I was at bar with friends, not yet done with my first pint. 2 separate clients reached out about their EPGs not working. One of them, ITV, let us know the little rectangle on their website that told folks what was on TV was blank. It seems quaint today, not that most everything is on demand.
+I opened an app on my phone to attempt to view logs and manage our servers - almost enjoying the interruption." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://l0.ai/posts/2023-08-01-common_challenges_as_a_new_em/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-07-08T10:00:00+00:00" />
+<meta property="article:modified_time" content="2023-07-08T10:00:00+00:00" />
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Common challenges as a new EM"/>
+<meta name="twitter:description" content="It was about 8pm, I was at bar with friends, not yet done with my first pint. 2 separate clients reached out about their EPGs not working. One of them, ITV, let us know the little rectangle on their website that told folks what was on TV was blank. It seems quaint today, not that most everything is on demand.
+I opened an app on my phone to attempt to view logs and manage our servers - almost enjoying the interruption."/>
+
+  
+  
+  
+  <link rel="stylesheet" href="https://l0.ai/css/style-white.css">
+  
+   <link rel="stylesheet" href="https://l0.ai/css/main.css"> 
+  
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+<link rel="icon" type="image/png" href="https://l0.ai/images/favicon.ico" />
+
+  
+    
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J7MP7KW334"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-J7MP7KW334');
+  </script>  
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+  <div class="content index py4">
+
+  <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+        <li><a href="/">Home</a></li>
+         
+        <li><a href="/posts">Writings</a></li>
+         
+        <li><a href="/about">About</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li>
+          <a class="icon" href=" https://l0.ai/posts/2023-07-01-knowledge-and-control/">
+            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');">
+            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#">
+            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
+          </a>
+        </li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fl0.ai%2fposts%2f2023-08-01-common_challenges_as_a_new_em%2f">
+      <i class="fab fa-facebook " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fl0.ai%2fposts%2f2023-08-01-common_challenges_as_a_new_em%2f&text=Common%20challenges%20as%20a%20new%20EM">
+      <i class="fab fa-twitter " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fl0.ai%2fposts%2f2023-08-01-common_challenges_as_a_new_em%2f&title=Common%20challenges%20as%20a%20new%20EM">
+      <i class="fab fa-linkedin " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fl0.ai%2fposts%2f2023-08-01-common_challenges_as_a_new_em%2f&is_video=false&description=Common%20challenges%20as%20a%20new%20EM">
+      <i class="fab fa-pinterest " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Common%20challenges%20as%20a%20new%20EM&body=Check out this article: https%3a%2f%2fl0.ai%2fposts%2f2023-08-01-common_challenges_as_a_new_em%2f">
+      <i class="fas fa-envelope " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fl0.ai%2fposts%2f2023-08-01-common_challenges_as_a_new_em%2f&title=Common%20challenges%20as%20a%20new%20EM">
+      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2023-08-01-common_challenges_as_a_new_em%2f&title=Common%20challenges%20as%20a%20new%20EM">
+      <i class="fab fa-reddit " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.stumbleupon.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2023-08-01-common_challenges_as_a_new_em%2f&title=Common%20challenges%20as%20a%20new%20EM">
+      <i class="fab fa-stumbleupon " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://digg.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2023-08-01-common_challenges_as_a_new_em%2f&title=Common%20challenges%20as%20a%20new%20EM">
+      <i class="fab fa-digg " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fl0.ai%2fposts%2f2023-08-01-common_challenges_as_a_new_em%2f&name=Common%20challenges%20as%20a%20new%20EM&description=It%20was%20about%208pm%2c%20I%20was%20at%20bar%20with%20friends%2c%20not%20yet%20done%20with%20my%20first%20pint.%202%20separate%20clients%20reached%20out%20about%20their%20EPGs%20not%20working.%20One%20of%20them%2c%20ITV%2c%20let%20us%20know%20the%20little%20rectangle%20on%20their%20website%20that%20told%20folks%20what%20was%20on%20TV%20was%20blank.%20It%20seems%20quaint%20today%2c%20not%20that%20most%20everything%20is%20on%20demand.%0aI%20opened%20an%20app%20on%20my%20phone%20to%20attempt%20to%20view%20logs%20and%20manage%20our%20servers%20-%20almost%20enjoying%20the%20interruption.">
+      <i class="fab fa-tumblr " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fl0.ai%2fposts%2f2023-08-01-common_challenges_as_a_new_em%2f&t=Common%20challenges%20as%20a%20new%20EM">
+      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <nav id="TableOfContents"></nav>
+    </div>
+  </span>
+</div>
+
+
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+      <h1 class="posttitle" itemprop="name headline">
+        Common challenges as a new EM
+      </h1>
+      <div class="meta">
+        
+        <div class="postdate">
+          
+          <time datetime="2023-07-08 10:00:00 &#43;0000 UTC" itemprop="datePublished">2023-07-08</time>
+          
+        </div>
+        
+        
+        <div class="article-tag">
+            <i class="fas fa-tag"></i>
+            
+            
+            <a class="tag-link" href="/tags/em" rel="tag">em</a>
+            
+        </div>
+        
+      </div>
+    </header>
+
+  
+    <div class="content" itemprop="articleBody">
+      <figure><img src="../manbar2.png"/>
+</figure>
+
+<p><strong>It was about 8pm</strong>, I was at bar with friends, not yet done with my first pint. 2 separate clients reached out about their EPGs not working. One of them, ITV, let us know the little rectangle on their website that told folks what was on TV was blank. It seems quaint today, not that most everything is on demand.</p>
+<p>I opened an app on my phone to attempt to view logs and manage our servers - almost enjoying the interruption. So silly. What I should have done is reach out to those oncall, I didn&rsquo;t - I figured I could resolve it quicker.</p>
+<p>I was the head of development for a startup then, and there is evidence of two obvious mistakes in my course of action: failing to delegate and resisting the shift from doer to enabler.  <strong>I should have</strong> pinged the folks on-call (indeed they should have been pinged directly!) and then helped them on a joint call.</p>
+<hr>
+<p>I&rsquo;ve had the opportunity to support a large number of people just starting their engineering management journey. In this time I&rsquo;ve observed a recurring set of challenges, which, perhaps if known up-front can help new EMs in their journey.</p>
+<ol>
+<li>
+<p><strong>Failing to Delegate Effectively</strong>: New managers often try to do everything themselves, either because they&rsquo;re used to being individual contributors (ICs) or because they feel it&rsquo;s the best way to maintain quality. This approach can lead to burnout for themselves, but most importabtly disempowers their team.</p>
+</li>
+<li>
+<p><strong>Neglecting People Management</strong>: Focusing too much on technical work (contribution or architecture) and neglecting pastoral care (people management) is also common mistake. Building relationships, understanding team dynamics, and managing individual team members&rsquo; career growth are crucial aspects of the role, and also for most people new skills. Momentum often keeps new EMs doing what they know, delying developing a crucial set of skills for their role.</p>
+</li>
+<li>
+<p><strong>Not Setting Clear Expectations</strong>: New managers sometimes struggle to communicate expectations clearly, whether related to project outcomes, individual roles, or team behavior. This can lead to confusion and misalignment within their team, or with other teams. This can be due to a multitude of factors including: impostor syndrome, conflict aversion, unclear communication, hedging (a concern of being accounutable for those expectations in the future) and poor structure.</p>
+</li>
+<li>
+<p><strong>Resisting the Shift from Doer to Enabler</strong>: As a manager, your role shifts from being a primary doer to enabling teams to succeed. New managers can struggle to make this shift, continuing to involve themselves deeply in technical work instead of focusing on strategy and team development. Importantly, they also struggle to understand how to be effective enablers. Make this shift as fast as you can. As a manager, your goal is to be multiplicative to your team.</p>
+</li>
+<li>
+<p><strong>Poor Communication Skills</strong>: Effective communication is key in any management role. New managers may underestimate the importance of regularly communicating with their team, providing feedback, and being transparent about decisions and changes. New managers also underestimate the degree to which communication is a skill, and thus never engage in training or purposeful practice in order to improve how they communicate.</p>
+</li>
+<li>
+<p><strong>Not Prioritizing Team Building and Culture</strong>: A less common issue: building a positive team culture and fostering a collaborative environment are important. New managers might overlook these aspects when they start.</p>
+</li>
+<li>
+<p><strong>Inadequate Time Management</strong>: Balancing the myriad responsibilities of a management role can be challenging. New managers might find it difficult to effectively manage their time, leading to inefficiencies and bottlenecks. I&rsquo;ve seen this happen both in the near term and the long term. Consider thinking of your work as a <a href="https://l0.ai/posts/2023-01-12-portfolio-of-work/">Portfolio of Work</a>.</p>
+</li>
+<li>
+<p><strong>Avoiding Difficult Conversations</strong>: Whether it&rsquo;s providing constructive feedback, addressing performance issues, or managing conflicts, new managers might shy away from tough conversations, which can lead to bigger problems down the line. Many books talk about this, but two I recommend are <a href="https://amzn.eu/d/gcvniEB">Crucial Conversations</a> and <a href="https://amzn.eu/d/bdPlR1I">Radical Candor</a></p>
+</li>
+<li>
+<p><strong>Not Seeking Feedback on Their Own Performance</strong>: Perhaps the most common mistake - it’s important for new managers to seek regular feedback to understand how they can improve. Failing to do so can result in missed opportunities for personal and professional development. Asking for feedback in a variety of ways is important, not all folks are comfortable with the same mediums. Bonus: ask your manager to hold skips and source feedback for you.</p>
+</li>
+<li>
+<p><strong>Ignoring Personal Development</strong>: Some new managers get so absorbed in their role that they neglect their own learning and development, which is essential for staying effective and relevant in their role. This happens well into their career and is a shame. Consistently focused on other people, these EMs forget themselves for a bit.</p>
+</li>
+</ol>
+<p>Avoiding these mistakes involves continuous learning, self-reflection, and being open to feedback. Successful engineering managers are those who can adapt, grow, and learn from their mistakes and those of others.</p>
+
+    </div>
+  </article>
+
+  
+  
+
+
+
+
+
+  <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/posts">Writings</a></li>
+         
+          <li><a href="/about">About</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <nav id="TableOfContents"></nav>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fl0.ai%2fposts%2f2023-08-01-common_challenges_as_a_new_em%2f">
+      <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fl0.ai%2fposts%2f2023-08-01-common_challenges_as_a_new_em%2f&text=Common%20challenges%20as%20a%20new%20EM">
+      <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fl0.ai%2fposts%2f2023-08-01-common_challenges_as_a_new_em%2f&title=Common%20challenges%20as%20a%20new%20EM">
+      <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fl0.ai%2fposts%2f2023-08-01-common_challenges_as_a_new_em%2f&is_video=false&description=Common%20challenges%20as%20a%20new%20EM">
+      <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Common%20challenges%20as%20a%20new%20EM&body=Check out this article: https%3a%2f%2fl0.ai%2fposts%2f2023-08-01-common_challenges_as_a_new_em%2f">
+      <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fl0.ai%2fposts%2f2023-08-01-common_challenges_as_a_new_em%2f&title=Common%20challenges%20as%20a%20new%20EM">
+      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2023-08-01-common_challenges_as_a_new_em%2f&title=Common%20challenges%20as%20a%20new%20EM">
+      <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.stumbleupon.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2023-08-01-common_challenges_as_a_new_em%2f&title=Common%20challenges%20as%20a%20new%20EM">
+      <i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://digg.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2023-08-01-common_challenges_as_a_new_em%2f&title=Common%20challenges%20as%20a%20new%20EM">
+      <i class="fab fa-digg fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fl0.ai%2fposts%2f2023-08-01-common_challenges_as_a_new_em%2f&name=Common%20challenges%20as%20a%20new%20EM&description=It%20was%20about%208pm%2c%20I%20was%20at%20bar%20with%20friends%2c%20not%20yet%20done%20with%20my%20first%20pint.%202%20separate%20clients%20reached%20out%20about%20their%20EPGs%20not%20working.%20One%20of%20them%2c%20ITV%2c%20let%20us%20know%20the%20little%20rectangle%20on%20their%20website%20that%20told%20folks%20what%20was%20on%20TV%20was%20blank.%20It%20seems%20quaint%20today%2c%20not%20that%20most%20everything%20is%20on%20demand.%0aI%20opened%20an%20app%20on%20my%20phone%20to%20attempt%20to%20view%20logs%20and%20manage%20our%20servers%20-%20almost%20enjoying%20the%20interruption.">
+      <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fl0.ai%2fposts%2f2023-08-01-common_challenges_as_a_new_em%2f&t=Common%20challenges%20as%20a%20new%20EM">
+      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;">
+          <i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;">
+          <i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;">
+          <i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');">
+          <i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+
+  <footer id="footer">
+  <div class="footer-left">
+    Copyright  &copy; 2023  l0.ai 
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+        <li><a href="/">Home</a></li>
+         
+        <li><a href="/posts">Writings</a></li>
+         
+        <li><a href="/about">About</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+
+  </div>
+</body>
+
+<link rel="stylesheet" href=/lib/font-awesome/css/all.min.css>
+<script src=/lib/jquery/jquery.min.js></script>
+<script src=/js/main.js></script>
+
+
+
+</html>
