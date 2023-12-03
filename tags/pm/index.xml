@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pm on l0.ai</title>
+    <link>https://l0.ai/tags/pm/</link>
+    <description>Recent content in pm on l0.ai</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 02 Dec 2023 11:00:00 +0000</lastBuildDate>
+    <atom:link href="https://l0.ai/tags/pm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Uncertainty weighted impact</title>
+      <link>https://l0.ai/posts/2023-09-03-uncertainty_weighted_impact/</link>
+      <pubDate>Sat, 02 Dec 2023 11:00:00 +0000</pubDate>
+      <guid>https://l0.ai/posts/2023-09-03-uncertainty_weighted_impact/</guid>
+      <description>The joys of the start-up journey have been neatly summarised a number of times. Some choice examples are &amp;ldquo;It&amp;rsquo;s like building a plane while it plummets back to earth&amp;rdquo; or &amp;ldquo;It&amp;rsquo;s like staring into the abyss and eating glass&amp;rdquo;
+Part of that struggle is to understand what to build next, before customers are ripping product out of your hands (also known as product market fit). There is only 1 answer: talk to customers.</description>
+    </item>
+  </channel>
+</rss>

@@ -6,8 +6,16 @@
     <description>Recent content in Posts on l0.ai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Aug 2023 10:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 02 Dec 2023 11:00:00 +0000</lastBuildDate>
     <atom:link href="https://l0.ai/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Uncertainty weighted impact</title>
+      <link>https://l0.ai/posts/2023-09-03-uncertainty_weighted_impact/</link>
+      <pubDate>Sat, 02 Dec 2023 11:00:00 +0000</pubDate>
+      <guid>https://l0.ai/posts/2023-09-03-uncertainty_weighted_impact/</guid>
+      <description>The joys of the start-up journey have been neatly summarised a number of times. Some choice examples are &amp;ldquo;It&amp;rsquo;s like building a plane while it plummets back to earth&amp;rdquo; or &amp;ldquo;It&amp;rsquo;s like staring into the abyss and eating glass&amp;rdquo;
+Part of that struggle is to understand what to build next, before customers are ripping product out of your hands (also known as product market fit). There is only 1 answer: talk to customers.</description>
+    </item>
     <item>
       <title>Common challenges as a new EM</title>
       <link>https://l0.ai/posts/2023-08-01-common_challenges_as_a_new_em/</link>
