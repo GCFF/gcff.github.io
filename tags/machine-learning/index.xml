@@ -6,8 +6,16 @@
     <description>Recent content in Machine Learning on l0.ai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 10 Dec 2022 18:30:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 20 Dec 2023 14:00:00 +0000</lastBuildDate>
     <atom:link href="https://l0.ai/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Neurips 2023, Part 1</title>
+      <link>https://l0.ai/posts/2023-12-20-neurips-2023-1/</link>
+      <pubDate>Wed, 20 Dec 2023 14:00:00 +0000</pubDate>
+      <guid>https://l0.ai/posts/2023-12-20-neurips-2023-1/</guid>
+      <description>Neurips 2023 Wrap-up - Posters (main conference) Neurips 2023, held in New Orleans once again, just finished. The last part of the Neurips ritual for me, is to pool my notes and write a wrap-up (or more than one), where I can reflect over what I saw in the conference that stood out or I want to pay attention to.
+In a very real way, over the past few years, Neurips has set the agenda for what I pay attention to in the field of machine learning over the following year.</description>
+    </item>
     <item>
       <title>Neurips Wrapup Post 1</title>
       <link>https://l0.ai/posts/2022-12-10-neurips-2022-1/</link>

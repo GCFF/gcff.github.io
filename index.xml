@@ -6,8 +6,16 @@
     <description>Recent content on l0.ai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 02 Dec 2023 11:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 20 Dec 2023 14:00:00 +0000</lastBuildDate>
     <atom:link href="https://l0.ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Neurips 2023, Part 1</title>
+      <link>https://l0.ai/posts/2023-12-20-neurips-2023-1/</link>
+      <pubDate>Wed, 20 Dec 2023 14:00:00 +0000</pubDate>
+      <guid>https://l0.ai/posts/2023-12-20-neurips-2023-1/</guid>
+      <description>Neurips 2023 Wrap-up - Posters (main conference) Neurips 2023, held in New Orleans once again, just finished. The last part of the Neurips ritual for me, is to pool my notes and write a wrap-up (or more than one), where I can reflect over what I saw in the conference that stood out or I want to pay attention to.
+In a very real way, over the past few years, Neurips has set the agenda for what I pay attention to in the field of machine learning over the following year.</description>
+    </item>
     <item>
       <title>Uncertainty weighted impact</title>
       <link>https://l0.ai/posts/2023-09-03-uncertainty_weighted_impact/</link>
@@ -21,7 +29,7 @@ Part of that struggle is to understand what to build next, before customers are 
       <link>https://l0.ai/posts/2023-08-01-common_challenges_as_a_new_em/</link>
       <pubDate>Tue, 01 Aug 2023 10:00:00 +0000</pubDate>
       <guid>https://l0.ai/posts/2023-08-01-common_challenges_as_a_new_em/</guid>
-      <description>It was about 8pm, I was at bar with friends, not yet done with my first pint. 2 separate clients reached out about their EPGs not working. One of them, ITV, let us know the little rectangle on their website that told folks what was on TV was blank. It seems quaint today, not that most everything is on demand.
+      <description>It was about 8pm, I was at bar with friends, not yet done with my first pint. 2 separate clients reached out about their EPGs not working. One of them, ITV, let us know the little rectangle on their website that told folks what was on TV was blank. It seems quaint today, now that most everything is on demand.
 I opened an app on my phone to attempt to view logs and manage our servers - almost enjoying the interruption.</description>
     </item>
     <item>
@@ -38,7 +46,7 @@ A more general take on this quote replaces engineering with delivery. That is, i
       <link>https://l0.ai/posts/2023-06-06-hipo/</link>
       <pubDate>Tue, 06 Jun 2023 14:45:00 +0000</pubDate>
       <guid>https://l0.ai/posts/2023-06-06-hipo/</guid>
-      <description>In a previous post post I shared some reflections about how to apportion time given a set of reports - and highlighted I use my view of the potential (especially appetite) and efficacy of that time given the report, to answer the question: who should I give more time to?
+      <description>In a previous post post I shared some reflections about how I apportion time given a set of reports - and highlighted my use of the potential (especially appetite) and efficacy of that time given the report, to answer the question: who should I give more time to?
 That post aimed to address how to think through time allocation, but didn&amp;rsquo;t speak to high potential individuals and the work of finding and nurturing them.</description>
     </item>
     <item>

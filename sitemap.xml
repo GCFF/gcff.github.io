@@ -2,16 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://l0.ai/</loc>
-    <lastmod>2023-12-02T11:00:00+00:00</lastmod>
+    <loc>https://l0.ai/tags/ai/</loc>
+    <lastmod>2023-12-20T14:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://l0.ai/tags/pm/</loc>
-    <lastmod>2023-12-02T11:00:00+00:00</lastmod>
+    <loc>https://l0.ai/</loc>
+    <lastmod>2023-12-20T14:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://l0.ai/tags/machine-learning/</loc>
+    <lastmod>2023-12-20T14:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://l0.ai/tags/neurips/</loc>
+    <lastmod>2023-12-20T14:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://l0.ai/posts/2023-12-20-neurips-2023-1/</loc>
+    <lastmod>2023-12-20T14:00:00+00:00</lastmod>
   </url><url>
     <loc>https://l0.ai/posts/</loc>
-    <lastmod>2023-12-02T11:00:00+00:00</lastmod>
+    <lastmod>2023-12-20T14:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://l0.ai/tags/research/</loc>
+    <lastmod>2023-12-20T14:00:00+00:00</lastmod>
   </url><url>
     <loc>https://l0.ai/tags/</loc>
+    <lastmod>2023-12-20T14:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://l0.ai/tags/pm/</loc>
     <lastmod>2023-12-02T11:00:00+00:00</lastmod>
   </url><url>
     <loc>https://l0.ai/posts/2023-09-03-uncertainty_weighted_impact/</loc>
@@ -53,19 +68,7 @@
     <loc>https://l0.ai/posts/2023-01-12-portfolio-of-work/</loc>
     <lastmod>2023-01-12T18:20:00+00:00</lastmod>
   </url><url>
-    <loc>https://l0.ai/tags/ai/</loc>
-    <lastmod>2022-12-10T18:30:00+00:00</lastmod>
-  </url><url>
-    <loc>https://l0.ai/tags/machine-learning/</loc>
-    <lastmod>2022-12-10T18:30:00+00:00</lastmod>
-  </url><url>
-    <loc>https://l0.ai/tags/neurips/</loc>
-    <lastmod>2022-12-10T18:30:00+00:00</lastmod>
-  </url><url>
     <loc>https://l0.ai/posts/2022-12-10-neurips-2022-1/</loc>
-    <lastmod>2022-12-10T18:30:00+00:00</lastmod>
-  </url><url>
-    <loc>https://l0.ai/tags/research/</loc>
     <lastmod>2022-12-10T18:30:00+00:00</lastmod>
   </url><url>
     <loc>https://l0.ai/posts/2022-11-9-fast-diffusion/</loc>

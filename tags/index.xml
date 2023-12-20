@@ -6,8 +6,36 @@
     <description>Recent content in Tags on l0.ai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 02 Dec 2023 11:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 20 Dec 2023 14:00:00 +0000</lastBuildDate>
     <atom:link href="https://l0.ai/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI</title>
+      <link>https://l0.ai/tags/ai/</link>
+      <pubDate>Wed, 20 Dec 2023 14:00:00 +0000</pubDate>
+      <guid>https://l0.ai/tags/ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Machine Learning</title>
+      <link>https://l0.ai/tags/machine-learning/</link>
+      <pubDate>Wed, 20 Dec 2023 14:00:00 +0000</pubDate>
+      <guid>https://l0.ai/tags/machine-learning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Neurips</title>
+      <link>https://l0.ai/tags/neurips/</link>
+      <pubDate>Wed, 20 Dec 2023 14:00:00 +0000</pubDate>
+      <guid>https://l0.ai/tags/neurips/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Research</title>
+      <link>https://l0.ai/tags/research/</link>
+      <pubDate>Wed, 20 Dec 2023 14:00:00 +0000</pubDate>
+      <guid>https://l0.ai/tags/research/</guid>
+      <description></description>
+    </item>
     <item>
       <title>pm</title>
       <link>https://l0.ai/tags/pm/</link>
@@ -48,34 +76,6 @@
       <link>https://l0.ai/tags/comms/</link>
       <pubDate>Thu, 12 Jan 2023 18:20:00 +0000</pubDate>
       <guid>https://l0.ai/tags/comms/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>AI</title>
-      <link>https://l0.ai/tags/ai/</link>
-      <pubDate>Sat, 10 Dec 2022 18:30:00 +0000</pubDate>
-      <guid>https://l0.ai/tags/ai/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Machine Learning</title>
-      <link>https://l0.ai/tags/machine-learning/</link>
-      <pubDate>Sat, 10 Dec 2022 18:30:00 +0000</pubDate>
-      <guid>https://l0.ai/tags/machine-learning/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Neurips</title>
-      <link>https://l0.ai/tags/neurips/</link>
-      <pubDate>Sat, 10 Dec 2022 18:30:00 +0000</pubDate>
-      <guid>https://l0.ai/tags/neurips/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Research</title>
-      <link>https://l0.ai/tags/research/</link>
-      <pubDate>Sat, 10 Dec 2022 18:30:00 +0000</pubDate>
-      <guid>https://l0.ai/tags/research/</guid>
       <description></description>
     </item>
     <item>

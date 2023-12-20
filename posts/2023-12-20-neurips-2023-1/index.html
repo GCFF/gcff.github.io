@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> Neurips 2023, Part 1 | l0.ai</title>
+  <meta name="description" content="l0.ai is where I {guillermo christen} write about technology: machine learning, data and labeling, management and communication.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta property="og:title" content="Neurips 2023, Part 1" />
+<meta property="og:description" content="Neurips 2023 Wrap-up - Posters (main conference) Neurips 2023, held in New Orleans once again, just finished. The last part of the Neurips ritual for me, is to pool my notes and write a wrap-up (or more than one), where I can reflect over what I saw in the conference that stood out or I want to pay attention to.
+In a very real way, over the past few years, Neurips has set the agenda for what I pay attention to in the field of machine learning over the following year." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://l0.ai/posts/2023-12-20-neurips-2023-1/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-12-20T14:00:00+00:00" />
+<meta property="article:modified_time" content="2023-12-20T14:00:00+00:00" />
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Neurips 2023, Part 1"/>
+<meta name="twitter:description" content="Neurips 2023 Wrap-up - Posters (main conference) Neurips 2023, held in New Orleans once again, just finished. The last part of the Neurips ritual for me, is to pool my notes and write a wrap-up (or more than one), where I can reflect over what I saw in the conference that stood out or I want to pay attention to.
+In a very real way, over the past few years, Neurips has set the agenda for what I pay attention to in the field of machine learning over the following year."/>
+
+  
+  
+  
+  <link rel="stylesheet" href="https://l0.ai/css/style-white.css">
+  
+   <link rel="stylesheet" href="https://l0.ai/css/main.css"> 
+  
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+<link rel="icon" type="image/png" href="https://l0.ai/images/favicon.ico" />
+
+  
+    
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J7MP7KW334"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-J7MP7KW334');
+  </script>  
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+  <div class="content index py4">
+
+  <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+        <li><a href="/">Home</a></li>
+         
+        <li><a href="/posts">Writings</a></li>
+         
+        <li><a href="/about">About</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li>
+          <a class="icon" href=" https://l0.ai/posts/2023-09-03-uncertainty_weighted_impact/">
+            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');">
+            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#">
+            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
+          </a>
+        </li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fl0.ai%2fposts%2f2023-12-20-neurips-2023-1%2f">
+      <i class="fab fa-facebook " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fl0.ai%2fposts%2f2023-12-20-neurips-2023-1%2f&text=Neurips%202023%2c%20Part%201">
+      <i class="fab fa-twitter " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fl0.ai%2fposts%2f2023-12-20-neurips-2023-1%2f&title=Neurips%202023%2c%20Part%201">
+      <i class="fab fa-linkedin " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fl0.ai%2fposts%2f2023-12-20-neurips-2023-1%2f&is_video=false&description=Neurips%202023%2c%20Part%201">
+      <i class="fab fa-pinterest " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Neurips%202023%2c%20Part%201&body=Check out this article: https%3a%2f%2fl0.ai%2fposts%2f2023-12-20-neurips-2023-1%2f">
+      <i class="fas fa-envelope " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fl0.ai%2fposts%2f2023-12-20-neurips-2023-1%2f&title=Neurips%202023%2c%20Part%201">
+      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2023-12-20-neurips-2023-1%2f&title=Neurips%202023%2c%20Part%201">
+      <i class="fab fa-reddit " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.stumbleupon.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2023-12-20-neurips-2023-1%2f&title=Neurips%202023%2c%20Part%201">
+      <i class="fab fa-stumbleupon " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://digg.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2023-12-20-neurips-2023-1%2f&title=Neurips%202023%2c%20Part%201">
+      <i class="fab fa-digg " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fl0.ai%2fposts%2f2023-12-20-neurips-2023-1%2f&name=Neurips%202023%2c%20Part%201&description=Neurips%202023%20Wrap-up%20-%20Posters%20%28main%20conference%29%20Neurips%202023%2c%20held%20in%20New%20Orleans%20once%20again%2c%20just%20finished.%20The%20last%20part%20of%20the%20Neurips%20ritual%20for%20me%2c%20is%20to%20pool%20my%20notes%20and%20write%20a%20wrap-up%20%28or%20more%20than%20one%29%2c%20where%20I%20can%20reflect%20over%20what%20I%20saw%20in%20the%20conference%20that%20stood%20out%20or%20I%20want%20to%20pay%20attention%20to.%0aIn%20a%20very%20real%20way%2c%20over%20the%20past%20few%20years%2c%20Neurips%20has%20set%20the%20agenda%20for%20what%20I%20pay%20attention%20to%20in%20the%20field%20of%20machine%20learning%20over%20the%20following%20year.">
+      <i class="fab fa-tumblr " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fl0.ai%2fposts%2f2023-12-20-neurips-2023-1%2f&t=Neurips%202023%2c%20Part%201">
+      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#llms-representing-people">LLMs representing people</a></li>
+    <li><a href="#planning">Planning</a></li>
+    <li><a href="#misc">Misc</a></li>
+    <li><a href="#code-code-synthesis-or-code-evaluation">Code, Code Synthesis or Code Evaluation:</a></li>
+    <li><a href="#data--efficiency--speed">Data / Efficiency / Speed:</a></li>
+    <li><a href="#llm-memory--context-length-updating">LLM Memory / Context length, updating:</a></li>
+  </ul>
+</nav>
+    </div>
+  </span>
+</div>
+
+
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+      <h1 class="posttitle" itemprop="name headline">
+        Neurips 2023, Part 1
+      </h1>
+      <div class="meta">
+        
+        <div class="postdate">
+          
+          <time datetime="2023-12-20 14:00:00 &#43;0000 UTC" itemprop="datePublished">2023-12-20</time>
+          
+        </div>
+        
+        
+        <div class="article-tag">
+            <i class="fas fa-tag"></i>
+            
+            
+            <a class="tag-link" href="/tags/ai" rel="tag">AI</a>
+            
+             ,  
+            <a class="tag-link" href="/tags/machine-learning" rel="tag">Machine Learning</a>
+            
+             ,  
+            <a class="tag-link" href="/tags/research" rel="tag">Research</a>
+            
+             ,  
+            <a class="tag-link" href="/tags/neurips" rel="tag">Neurips</a>
+            
+        </div>
+        
+      </div>
+    </header>
+
+  
+    <div class="content" itemprop="articleBody">
+      <figure><img src="../ai_bigeasy.png"/>
+</figure>
+
+<h1 id="neurips-2023-wrap-up---posters-main-conference">Neurips 2023 Wrap-up - Posters (main conference)</h1>
+<p><a href="https://nips.cc/virtual/2023/calendar">Neurips 2023</a>, held in New Orleans once again, just finished. The last part of the Neurips ritual for me, is to pool my notes and write a <em>wrap-up</em> (or more than one), where I can reflect over what I saw in the conference that stood out or I want to pay attention to.</p>
+<p>In a very real way, over the past few years, Neurips has set the agenda for what I pay attention to in the field of machine learning over the following year. Sometimes this is made especially easy - like when GPT is released at the same time as the conference. (Or Mistral announce their platform and pricing for this year).</p>
+<p>I&rsquo;ve selected a few core themes and within them, a few key posters / papers. This is a tiny subset, filtered throguh my eyes. The conference this year hade an immense amount of research, with each poster session hosting about 2k posters and there were 6 of them - every time you stepped into the posters hall, it felt vast.  I suspect I&rsquo;ll 2 or 3 posts to cover more posters, the main conderence and the workshops.</p>
+<h2 id="llms-representing-people">LLMs representing people</h2>
+<ul>
+<li><strong><a href="https://openreview.net/pdf?id=CbsJ53LdKc">In-Context Impersonation Reveals Large Language Models&rsquo; Strengths and Biases</a></strong>  - investigates how the behavour of large language models changes as you ask them to impersonate a persona. The authors then evaluate downstream performance. They in-context prompt the model to behave like &ldquo;a 4 year old&rdquo; or &ldquo;an ornithologist&rdquo; and evaluate downstream modeling tasks. They find that impresonation affects performance in mostly expected ways: as 4 year old a model performs worst than as an adult, and an ornithologist performs better in characterising bird species. This work left me with lot&rsquo;s of open questions about why this happens? Speaking to the authors, it was clear that like other <em>why</em> questions about LLMs, this one is quite difficult to answer. I have a reading list to tackle after this presentation.</li>
+<li><strong><a href="https://openreview.net/pdf?id=I9xE1Jsjfx">Inducing Personality</a></strong> - A slightly different take on persona than the work above, this work proposes that language models can be tested using the 5 personality traits currently used in phychometirc tests. It first establishes a personality for a set of models by testing them for openess, conscientiousness, extraversion, agreeableness and neuroticism. It then suggests you can induce a personality through prompting across each dimension. You can then test responses (after inducing a personality) against the scores for each latent dimension and comparing these against human evaluation of those scores.  NIPS <a href="https://nips.cc/virtual/2023/poster/72136">page</a></li>
+</ul>
+<h2 id="planning">Planning</h2>
+<p>There was a whole workshop on Planning (which I didn&rsquo;t attend)!</p>
+<ul>
+<li><strong><a href="https://openreview.net/pdf?id=KtvPdGb31Z">Describe, Explain, Plan and Select: Interactive Planning with LLMs Enables Open-World Multi-Task Agents</a></strong> -  <a href="https://nips.cc/virtual/2023/poster/71984">poster</a> - Explores task planning within the world of MineCraft. Has some very clever ideas in it. It uses an LLM to plan, and forces the plan to have a code like structure (which helps with plan coherence and ultimatley performance). It then uses a <em>selector</em> to choose which goal (step in the plan) to go for, given the current state, in order to improve efficiency (given there are many plans that could work). Then they use a Goal Conditioned Policy executor which interacts with the environment to achieve a goal. The environment produces feedback (observations), that are used to produced explanations (for failed goals) in order to try again (re plan if needed), like the many aproaches at <a href="https://github.com/rxlqn/awesome-llm-self-reflection">Self Reflexion</a>.</li>
+<li><strong><a href="https://nips.cc/virtual/2023/poster/71377">On the Planning Abilities of Large Language Models - A Critical Investigation</a></strong> - This paper and the next were in the sipcy category. It posits LLMs (even GPT4) have significant difficulty in performing actual planning for tasks. Even when the evaluation criteria are relaxed, LLMs struggle without an external validator. A key take away from this work is that the many self critique approaches are a mirage. This is spicy because there is also <a href="https://arxiv.org/abs/2206.05802">plenty</a> of <a href="https://arxiv.org/abs/2207.05221">literature</a> pointing to LLMs being able to critique their own outputs and Constitutional AI is very much predicated on the beleif the models are better at critiquing output than generating it. The conversation with the authors was super fun, and the core idea was that if you don&rsquo;t have an external guide (like behavour cloning in one of the papers linke above), the LLMs struggle.</li>
+<li><a href="https://nips.cc/virtual/2023/poster/73553">PlanBench</a> - From the same group that wrote the planning abilities critique paper, it proposes a benchmark to more accuratley evaluate the planning ability of LLMs</li>
+</ul>
+<h2 id="misc">Misc</h2>
+<ul>
+<li><strong><a href="https://openreview.net/pdf?id=K30wTdIIYc">Orthogonal FT for Diffusion Models</a></strong> - proposes a method for controlling diffusion models via fine tunning (like DreamBooth for instance) that is more efficient, based on the premise that what matters in weight matrices is the relative angles (hyperspherical similarity) rather than magnitudes. Based on this it proposes an fine tunning by finding an orthogonal matrix (an efficient orthogonal parametrisation) that represents the weight updates (a rotation or reflection) of a Fine Tune. It then compares OFT to Lora (a popular parameter efficient FT method). It claims positive results over LORA and DreamBooth while being much more parameter efficient.</li>
+</ul>
+<h2 id="code-code-synthesis-or-code-evaluation">Code, Code Synthesis or Code Evaluation:</h2>
+<ul>
+<li><strong><a href="https://crosscodeeval.github.io/">Cross Code Eval</a></strong> - <a href="https://nips.cc/virtual/2023/poster/73423">Neurips page</a> - Poposes a benchmark for cross file completion, that is much more closely related to real world tasks than the human Eval benchmark. The authors present how they control for contamination and curate a dataset that represents completions that require &lsquo;knowledge&rsquo; (often function signatures) that live in other files. I found this interesting and very needed work and really well explained by the authors.</li>
+<li><strong>ALGO: Synthesis algorithmic programs</strong> - [Poster](<a href="https://nips.cc/media/PosterPDFs/NeurIPS">https://nips.cc/media/PosterPDFs/NeurIPS</a> 2023/72044.png?t=1701377425.7068577). Posits that simple (brute force) solutions to LeetCode style problms are easy and thus solvable by existing LLMs. This roughly maps to what you should do when doing one of these problems (find a naive solution first, then optimise). Based on this premise (easy to solve), the authors treat an LLM as an Oracle (in that it gets the correct answer through a naive solution) to learn optimal solutions (which are harder), by checking agaisnt the Oracle for feedback.</li>
+<li><strong><a href="https://nips.cc/virtual/2023/poster/71669">On-the-Fly Adapting Code Summarization on Trainable Cost-Effective Language Models</a></strong> - focused on the generation of comments, using the most helpful examples for comment generation and removing the &lsquo;harmful samples a fine-tunned model performs better on comment generation. In order to find the helpfulness of a sample, they calculater some sample pairwise training dynamics metrics and prune the dataset based on these. The paper proposes using a single or very few <em>canonical examples</em> to prune the dataset. I wasn&rsquo;t super conviced with this work and I think I might need to revisit it later.</li>
+</ul>
+<h2 id="data--efficiency--speed">Data / Efficiency / Speed:</h2>
+<ul>
+<li><strong><a href="https://arxiv.org/pdf/2305.11206.pdf">LIMA</a></strong> Paper - NIPS <a href="https://nips.cc/virtual/2023/poster/72022">page</a> from META suggests very little data is actually needed to align a model to a mode (a.k.a instruction tunning) and that practically all of a model&rsquo;s knowledge comes from pre-training. More over it suggest RLHF and human preference data (DPO) is scarcely needed. Interesting connotation: loads of data needed for appropriate pre-training, very little data (1k) needed for structuring of formats, tone, response mechanics. A neat definition of Alignment <a href="https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FEfficient_Transformers%2FBbOgkq2AqB.png?alt=media&amp;token=ba7be422-18a1-440f-9cbe-f404afd3f427">data</a> and <a href="https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FEfficient_Transformers%2FFki7pNFkpS.png?alt=media&amp;token=5bd2b23e-fcfe-4777-a77d-3df2f48f61d1">results</a></li>
+<li><strong><a href="https://openreview.net/pdf?id=EfMyf9MC3t">Big Little Decoder</a></strong> - NIPS <a href="https://nips.cc/virtual/2023/poster/72306">page</a>: proposes running a Big and a Small decoder. Rather than emitting candidates for the next token from the small model and validating them, just accepts them given a confidence score and if the confidence score is below X, then continues generation from the big model using the sequence before x_i (low conf token). This means little decoder runs ahead of large model.</li>
+<li>More to come here in a different post as there was loads of interesting work on covering efficiency and fast infrence, including parallel speculative decoding, interesting takes on precision requiremens, and various takes on LORAs.</li>
+</ul>
+<h2 id="llm-memory--context-length-updating">LLM Memory / Context length, updating:</h2>
+<ul>
+<li><strong><a href="https://openreview.net/pdf?id=Oc1SIKxwdV">Life Long Editing of LLMs</a></strong> - Proposes using a hashmap (of KV cache), to map incorrect generations (an incorrect token) to correct generations, without any changes to weights or any fine tunning. It does so by literally mapping a resulting token (which is a point in multi-dimensional space), to a new token. To find the new token, a procedure similar to inversion is used, exploring the embedding space of where the correct token ought to be. Once found a dictionary of old_point : new_point is made. For any token matching old_point + epsilon, it&rsquo;s replaced with new point.</li>
+<li><strong><a href="https://openreview.net/pdf?id=CbsJ53LdKc">Alternating Updates for Transformers</a></strong> for efficiency - Proposes doubling the representation (the width) of transformer layers without double the computation by applying alternating prediction and correction updeates across the two blocks at training time. This feel like a clever hack, but I had tons of questions and didn&rsquo;t get time with the authors as loads of people were at the poster when I was there. Need to do more reading here.</li>
+<li><strong><a href="https://arxiv.org/abs/2310.07707">MatFormer</a></strong> - Proposes having a matrioshka (the Mat in MatFormer) architecture of layers. Where forward passes run through N variant sizes of the layer. This means a final model (with similar inference time dynamics because of the same training) can be fit to a variety of memory and compute constraints (by selecting the appropriate size of the transformer layer).</li>
+</ul>
+
+    </div>
+  </article>
+
+  
+  
+
+
+
+
+
+  <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/posts">Writings</a></li>
+         
+          <li><a href="/about">About</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#llms-representing-people">LLMs representing people</a></li>
+    <li><a href="#planning">Planning</a></li>
+    <li><a href="#misc">Misc</a></li>
+    <li><a href="#code-code-synthesis-or-code-evaluation">Code, Code Synthesis or Code Evaluation:</a></li>
+    <li><a href="#data--efficiency--speed">Data / Efficiency / Speed:</a></li>
+    <li><a href="#llm-memory--context-length-updating">LLM Memory / Context length, updating:</a></li>
+  </ul>
+</nav>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fl0.ai%2fposts%2f2023-12-20-neurips-2023-1%2f">
+      <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fl0.ai%2fposts%2f2023-12-20-neurips-2023-1%2f&text=Neurips%202023%2c%20Part%201">
+      <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fl0.ai%2fposts%2f2023-12-20-neurips-2023-1%2f&title=Neurips%202023%2c%20Part%201">
+      <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fl0.ai%2fposts%2f2023-12-20-neurips-2023-1%2f&is_video=false&description=Neurips%202023%2c%20Part%201">
+      <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Neurips%202023%2c%20Part%201&body=Check out this article: https%3a%2f%2fl0.ai%2fposts%2f2023-12-20-neurips-2023-1%2f">
+      <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fl0.ai%2fposts%2f2023-12-20-neurips-2023-1%2f&title=Neurips%202023%2c%20Part%201">
+      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2023-12-20-neurips-2023-1%2f&title=Neurips%202023%2c%20Part%201">
+      <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.stumbleupon.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2023-12-20-neurips-2023-1%2f&title=Neurips%202023%2c%20Part%201">
+      <i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://digg.com/submit?url=https%3a%2f%2fl0.ai%2fposts%2f2023-12-20-neurips-2023-1%2f&title=Neurips%202023%2c%20Part%201">
+      <i class="fab fa-digg fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fl0.ai%2fposts%2f2023-12-20-neurips-2023-1%2f&name=Neurips%202023%2c%20Part%201&description=Neurips%202023%20Wrap-up%20-%20Posters%20%28main%20conference%29%20Neurips%202023%2c%20held%20in%20New%20Orleans%20once%20again%2c%20just%20finished.%20The%20last%20part%20of%20the%20Neurips%20ritual%20for%20me%2c%20is%20to%20pool%20my%20notes%20and%20write%20a%20wrap-up%20%28or%20more%20than%20one%29%2c%20where%20I%20can%20reflect%20over%20what%20I%20saw%20in%20the%20conference%20that%20stood%20out%20or%20I%20want%20to%20pay%20attention%20to.%0aIn%20a%20very%20real%20way%2c%20over%20the%20past%20few%20years%2c%20Neurips%20has%20set%20the%20agenda%20for%20what%20I%20pay%20attention%20to%20in%20the%20field%20of%20machine%20learning%20over%20the%20following%20year.">
+      <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fl0.ai%2fposts%2f2023-12-20-neurips-2023-1%2f&t=Neurips%202023%2c%20Part%201">
+      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;">
+          <i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;">
+          <i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;">
+          <i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');">
+          <i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+
+  <footer id="footer">
+  <div class="footer-left">
+    Copyright  &copy; 2023  l0.ai 
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+        <li><a href="/">Home</a></li>
+         
+        <li><a href="/posts">Writings</a></li>
+         
+        <li><a href="/about">About</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+
+  </div>
+</body>
+
+<link rel="stylesheet" href=/lib/font-awesome/css/all.min.css>
+<script src=/lib/jquery/jquery.min.js></script>
+<script src=/js/main.js></script>
+
+
+
+</html>
